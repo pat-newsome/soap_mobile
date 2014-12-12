@@ -1,0 +1,14 @@
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.iOS\bin\iPhone\Debug\FormsTemplateiOS.exe
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.iOS\bin\iPhone\Debug\FormsTemplateiOS.pdb
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.iOS\bin\iPhone\Debug\ALFC_SOAP.dll
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.iOS\bin\iPhone\Debug\Xamarin.Forms.Core.dll
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.iOS\bin\iPhone\Debug\Xamarin.Forms.Platform.iOS.dll
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.iOS\bin\iPhone\Debug\Xamarin.Forms.Xaml.dll
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.iOS\bin\iPhone\Debug\ALFC_SOAP.pdb
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.iOS\bin\iPhone\Debug\ALFC_SOAP.dll.mdb
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.iOS\bin\iPhone\Debug\Xamarin.Forms.Core.xml
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.iOS\bin\iPhone\Debug\Xamarin.Forms.Xaml.xml
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.iOS\obj\iPhone\Debug\
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.iOS\obj\iPhone\Debug\ALFC_SOAP.iOS.csprojResolveAssemblyReference.cache
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.iOS\obj\iPhone\Debug\FormsTemplateiOS.exe
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.iOS\obj\iPhone\Debug\FormsTemplateiOS.pdb
