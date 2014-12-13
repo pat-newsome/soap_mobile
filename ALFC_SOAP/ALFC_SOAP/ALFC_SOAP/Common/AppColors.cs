@@ -38,7 +38,7 @@ namespace ALFC_SOAP.Common
         {
             get { return Color.FromRgb(98, 25, 37); }
         }
-
+        
         public static Color Rose
         {
             get { return Color.FromRgb(182, 128, 136); }
@@ -53,5 +53,14 @@ namespace ALFC_SOAP.Common
         {
             get { return Color.Transparent; }
         }
+        public static Color TextGray
+        {
+            get { return Color.FromRgb(98, 98, 98); }
+        }
+        public static Color TextRed
+        {
+            get { return Color.Red; }
+        }
+        
     }
 }

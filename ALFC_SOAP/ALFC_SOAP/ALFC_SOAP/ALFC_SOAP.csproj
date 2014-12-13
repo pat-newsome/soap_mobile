@@ -35,13 +35,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Data\IDataInfo.cs" />
+    <Compile Include="Data\IDataListItem.cs" />
+    <Compile Include="Entities\ReadingPlan.cs" />
+    <Compile Include="Pages\BooksPage.cs" />
+    <Compile Include="Views\BaseListItemTemplate.cs" />
+    <Compile Include="Views\BookListView.cs" />
     <Compile Include="Common\AppColors.cs" />
-    <Compile Include="Data\BibleInfo.cs" />
+    <Compile Include="Data\BibleDataInfo.cs" />
     <Compile Include="Data\BookInfo.cs" />
-    <Compile Include="Data\ReadingInfo.cs" />
+    <Compile Include="Data\ReadingDataInfo.cs" />
     <Compile Include="Entities\Book.cs" />
     <Compile Include="Entities\Reading.cs" />
-    <Compile Include="HomePage.cs" />
+    <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

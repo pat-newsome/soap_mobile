@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ALFC_SOAP.Entities
 {
-    public class Reading : IDataListItem
+    public class ReadingPlan : IDataListItem
     {
         public int Id
         {
@@ -26,6 +26,11 @@ namespace ALFC_SOAP.Entities
             set;
         }
 
-        public string Url { get; set; }
+        public List<Reading> AssociatedReadings { get; set; }
+
+        public ReadingPlan()
+        {
+            AssociatedReadings = new List<Reading>();
+        }
     }
 }
