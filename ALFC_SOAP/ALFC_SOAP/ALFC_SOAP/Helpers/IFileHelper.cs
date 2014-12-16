@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace ALFC_SOAP
+{
+    public interface IFileHelper
+    {
+        Task<bool> ExistsAsync(string filename);
+
+        Task WriteTextAsync(string filename, string text);
+
+        Task<string> ReadTextAsync(string filename);
+
+        Task<IEnumerable<string>> GetFilesAsync();
+
+        Task DeleteFileAsync(string filename);
+    }
+}

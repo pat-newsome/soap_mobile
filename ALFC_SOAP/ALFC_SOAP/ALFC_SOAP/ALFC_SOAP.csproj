@@ -38,7 +38,13 @@
     <Compile Include="Data\IDataInfo.cs" />
     <Compile Include="Data\IDataListItem.cs" />
     <Compile Include="Entities\ReadingPlan.cs" />
+    <Compile Include="Entities\Soap.cs" />
+    <Compile Include="Entities\SoapFolder.cs" />
+    <Compile Include="Helpers\FileHelper.cs" />
+    <Compile Include="Helpers\IFileHelper.cs" />
+    <Compile Include="Helpers\ILifecycleHelper.cs" />
     <Compile Include="Pages\BooksPage.cs" />
+    <Compile Include="Pages\SoapPage.cs" />
     <Compile Include="Views\BaseListItemTemplate.cs" />
     <Compile Include="Views\BookListView.cs" />
     <Compile Include="Common\AppColors.cs" />

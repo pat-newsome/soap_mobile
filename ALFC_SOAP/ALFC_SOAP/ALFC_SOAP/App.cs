@@ -9,19 +9,20 @@ namespace ALFC_SOAP
 {
     public class App
     {
+
+        static SoapFolder soapFolder = new SoapFolder();
+
+        internal static readonly string TransientFilename = "TempSOAP.save";
+
+        internal static SoapFolder SoapFolder
+        {
+            get { return soapFolder; }
+        }
         public static Page GetMainPage()
         {
 
             return new NavigationPage(new HomePage());
-            //return new ContentPage
-            //{
-            //    Content = new Label
-            //    {
-            //        Text = "SOAP  Journal",
-            //        VerticalOptions = LayoutOptions.CenterAndExpand,
-            //        HorizontalOptions = LayoutOptions.CenterAndExpand,
-            //    },
-            //};
+          
         }
     }
 }
