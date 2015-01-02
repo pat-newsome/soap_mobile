@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" android:versionCode="1" android:versionName="1.0" package="ALFC_SOAP.Android">
-  <uses-sdk android:targetSdkVersion="19" android:minSdkVersion="14" />
+  <uses-sdk android:targetSdkVersion="19" android:minSdkVersion="16" />
   <application android:label="SOAP Journal" android:icon="@drawable/icon" android:name="mono.android.app.Application" android:debuggable="true">
-    <activity android:configChanges="orientation|screenSize" android:label="ALFC_SOAP" android:name="alfc_soap.droid.MainActivity">
+    <activity android:configChanges="orientation|screenSize" android:label="SOAP journal" android:name="alfc_soap.droid.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
@@ -17,7 +17,7 @@
     </receiver>
   </application>
   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-  <uses-permission android:name="android.permission.INTERNET" />
-  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

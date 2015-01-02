@@ -15,7 +15,11 @@ namespace ALFC_SOAP
         {
             this.Filename = filename;
         }
-
+        public Soap(string filename, string scripture)
+        {
+            this.Filename = filename;
+            this.Scripture = scripture;
+        }
         public string Filename { private set; get; }
 
         public string Application
@@ -53,7 +57,7 @@ namespace ALFC_SOAP
                     this.Identifier = MakeIdentifier();
                 }
             }
-            get { return observation; }
+            get { return prayer; }
         }
 
         public string Scripture

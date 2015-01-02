@@ -11,7 +11,7 @@ using Xamarin.Forms.Platform.Android;
 
 namespace ALFC_SOAP.Droid
 {
-    [Activity(Label = "ALFC_SOAP", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "SOAP journal", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : AndroidActivity
     {
         protected override void OnCreate(Bundle bundle)

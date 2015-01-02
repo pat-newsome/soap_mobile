@@ -1,5 +1,5 @@
-﻿<xapCache source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\Bin\Debug\PhoneApp1_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="12/7/2014 7:40:51 AM">
-  <file source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\obj\Debug\ALFC_SOAP.WinPhone.dll" archivePath="ALFC_SOAP.WinPhone.dll" lastWriteTime="12/7/2014 7:40:50 AM" />
+﻿<xapCache source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\Bin\Debug\PhoneApp1_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="12/16/2014 7:53:31 AM">
+  <file source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\obj\Debug\ALFC_SOAP.WinPhone.dll" archivePath="ALFC_SOAP.WinPhone.dll" lastWriteTime="12/16/2014 7:53:30 AM" />
   <file source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="12/5/2014 4:38:16 PM" />
   <file source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="12/5/2014 4:38:16 PM" />
   <file source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="12/5/2014 4:38:16 PM" />
@@ -11,15 +11,15 @@
   <file source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\Toolkit.Content\ApplicationBar.Check.png" archivePath="Toolkit.Content\ApplicationBar.Check.png" lastWriteTime="12/5/2014 4:38:20 PM" />
   <file source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\Toolkit.Content\ApplicationBar.Delete.png" archivePath="Toolkit.Content\ApplicationBar.Delete.png" lastWriteTime="12/5/2014 4:38:20 PM" />
   <file source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\Toolkit.Content\ApplicationBar.Select.png" archivePath="Toolkit.Content\ApplicationBar.Select.png" lastWriteTime="12/5/2014 4:38:20 PM" />
-  <file source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="12/6/2014 9:15:34 AM" />
+  <file source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="12/16/2014 7:53:30 AM" />
   <file source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\Bin\Debug\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="12/5/2014 4:38:16 PM" />
   <file source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="12/5/2014 4:38:16 PM" />
-  <file source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Debug\ALFC_SOAP.dll" archivePath="ALFC_SOAP.dll" lastWriteTime="12/7/2014 7:40:45 AM" />
+  <file source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Debug\ALFC_SOAP.dll" archivePath="ALFC_SOAP.dll" lastWriteTime="12/16/2014 7:53:21 AM" />
   <file source="C:\Github\Develop\Soap\ALFC_SOAP\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="12/5/2014 4:38:20 PM" />
   <file source="C:\Github\Develop\Soap\ALFC_SOAP\packages\Xamarin.Forms.1.0.6186\lib\WP80\Xamarin.Forms.Core.dll" archivePath="Xamarin.Forms.Core.dll" lastWriteTime="12/5/2014 4:38:13 PM" />
   <file source="C:\Github\Develop\Soap\ALFC_SOAP\packages\Xamarin.Forms.1.0.6186\lib\WP80\Xamarin.Forms.Platform.WP8.dll" archivePath="Xamarin.Forms.Platform.WP8.dll" lastWriteTime="12/5/2014 4:38:13 PM" />
   <file source="C:\Github\Develop\Soap\ALFC_SOAP\packages\Xamarin.Forms.1.0.6186\lib\WP80\Xamarin.Forms.Xaml.dll" archivePath="Xamarin.Forms.Xaml.dll" lastWriteTime="12/5/2014 4:38:13 PM" />
   <file source="C:\Github\Develop\Soap\ALFC_SOAP\packages\Xamarin.Forms.1.0.6186\lib\WP80\Xamarin.Forms.Core.xml" archivePath="Xamarin.Forms.Core.xml" lastWriteTime="12/5/2014 4:38:13 PM" />
   <file source="C:\Github\Develop\Soap\ALFC_SOAP\packages\Xamarin.Forms.1.0.6186\lib\WP80\Xamarin.Forms.Xaml.xml" archivePath="Xamarin.Forms.Xaml.xml" lastWriteTime="12/5/2014 4:38:13 PM" />
-  <file source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="12/6/2014 9:15:34 AM" />
+  <file source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="12/16/2014 7:53:30 AM" />
 </xapCache>

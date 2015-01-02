@@ -1,5 +1,5 @@
-﻿using System;
-
+﻿using ALFC_SOAP.Common;
+using System;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -7,7 +7,7 @@ namespace ALFC_SOAP
 {
     public class SoapPage : ContentPage
     {
-         Soap soapmessage;
+        Soap soapmessage;
         bool isEdit;
         ILifecycleHelper helper = DependencyService.Get<ILifecycleHelper>();
 
@@ -21,10 +21,10 @@ namespace ALFC_SOAP
             // Create Entry and Editor views.
             Entry entry = new Entry
             {
-                Placeholder = "Title (optional)"
+                Placeholder = Title
             };
 
-            Editor editor = new Editor
+            Editor editor0 = new Editor
             {
                 Keyboard = Keyboard.Create(KeyboardFlags.All),
                 BackgroundColor = Device.OnPlatform(Color.Default, 
@@ -32,21 +32,54 @@ namespace ALFC_SOAP
                                                     Color.White),
                 VerticalOptions = LayoutOptions.FillAndExpand
             };
+            Editor editor1 = new Editor
+            {
+                Keyboard = Keyboard.Create(KeyboardFlags.All),
+                BackgroundColor = Device.OnPlatform(Color.Default,
+                                                    Color.Default,
+                                                    Color.White),
+                VerticalOptions = LayoutOptions.FillAndExpand
+            };
+            Editor editor2 = new Editor
+            {
+                Keyboard = Keyboard.Create(KeyboardFlags.All),
+                BackgroundColor = Device.OnPlatform(Color.Default,
+                                                    Color.Default,
+                                                    Color.White),
+                VerticalOptions = LayoutOptions.FillAndExpand
+            };
+            Button savebtn = new Button
+            {
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                HorizontalOptions = LayoutOptions.CenterAndExpand,
+                TextColor = AppColors.TextGray,
+                Text = "save"
+            };
+            savebtn.Clicked += savebtn_Clicked;
 
             // Set data bindings.
-            this.BindingContext = soapmessage;
-            entry.SetBinding(Entry.TextProperty, "Title");
-            editor.SetBinding(Editor.TextProperty, "Text");
-
+            this.BindingContext = this.soapmessage;
+            entry.SetBinding(Entry.TextProperty, "Scripture");
+            editor0.SetBinding(Editor.TextProperty, "Observation");
+            editor1.SetBinding(Editor.TextProperty, "Application");
+            editor2.SetBinding(Editor.TextProperty, "Prayer");
             // Assemble page.
             StackLayout stackLayout = new StackLayout
             {
                 Children = 
                 {
-                    new Label { Text = "Title:" },
+                    
+                    new Label { Text = "Scripture:" },
                     entry,
-                    new Label { Text = "Note:" },
-                    editor,
+                    new Label { Text = "Observation:" },
+                    editor0,
+                    
+                    new Label { Text = "Application:" },
+                    editor1,
+                    
+                    new Label { Text = "Prayer:" },
+                    editor2,
+                    savebtn
                 }
             };
 
@@ -106,9 +139,19 @@ namespace ALFC_SOAP
                     };
 
                 this.ToolbarItems.Add(deleteItem);
+                editor0.Text = soapmessage.Observation;
+                editor1.Text = soapmessage.Application;
+                editor2.Text = soapmessage.Prayer;
             }
 
             this.Content = stackLayout;
+        }
+
+        async void savebtn_Clicked(object sender, EventArgs e)
+        {
+            //await soapmessage.SaveAsync();
+            //App.SoapFolder.SoapMessages.Add(soapmessage);
+            await Navigation.PushAsync(new EntriesPage());
         }
 
         protected override void OnAppearing()

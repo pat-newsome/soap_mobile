@@ -2,17 +2,21 @@
 using System.Collections;
 using Xamarin.Forms;
 using ALFC_SOAP.Data;
+using ALFC_SOAP.Entities;
+using ALFC_SOAP.Common;
 namespace ALFC_SOAP
 {
     public class BookListView : ListView
     {
-        
 
+        BibleDataInfo db;
         public BookListView()
         {
-            BibleDataInfo db = new BibleDataInfo();
+             db = new BibleDataInfo();
             this.ItemsSource = db.GetList();
-
+            this.ItemTemplate = BaseListItemTemplate.GetLabel(AppColors.BGBlue);
         }
+
+     
     }
 }

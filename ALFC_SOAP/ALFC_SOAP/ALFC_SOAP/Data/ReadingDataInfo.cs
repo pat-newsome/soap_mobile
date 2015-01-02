@@ -15,17 +15,18 @@ namespace ALFC_SOAP.Data
         
         public ReadingDataInfo()
         {
-            currentDayofYear = DateTime.Now.DayOfYear;
-            
+            currentDayofYear = DateTime.Now.DayOfYear;     
         }
 
         
 
-        private List<Reading> CurrentReadingList(int offSet)
+        private List<Reading> CurrentReadingList(int planId)
         {
             var readings = new List<Reading>();
             
+            //Select list of readings from data
 
+            
 
             return readings;
         }
@@ -39,5 +40,7 @@ namespace ALFC_SOAP.Data
             readings.Add(new Reading { Id = 3, Name = "Prophecy", Value = "Revelation, Ezkial" });
             return readings;
         }
+
+
     }
 }

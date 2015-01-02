@@ -10,7 +10,9 @@ public class GenericAnimatorListener
 	static {
 		__md_methods = 
 			"n_onAnimationCancel:(Landroid/animation/Animator;)V:GetOnAnimationCancel_Landroid_animation_Animator_Handler\n" +
+			"n_onAnimationPause:(Landroid/animation/Animator;)V:GetOnAnimationPause_Landroid_animation_Animator_Handler\n" +
 			"n_onAnimationRepeat:(Landroid/animation/Animator;)V:GetOnAnimationRepeat_Landroid_animation_Animator_Handler\n" +
+			"n_onAnimationResume:(Landroid/animation/Animator;)V:GetOnAnimationResume_Landroid_animation_Animator_Handler\n" +
 			"n_onAnimationEnd:(Landroid/animation/Animator;)V:GetOnAnimationEnd_Landroid_animation_Animator_Handler\n" +
 			"";
 		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.GenericAnimatorListener, Xamarin.Forms.Platform.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", GenericAnimatorListener.class, __md_methods);
@@ -33,12 +35,28 @@ public class GenericAnimatorListener
 	private native void n_onAnimationCancel (android.animation.Animator p0);
 
 
+	public void onAnimationPause (android.animation.Animator p0)
+	{
+		n_onAnimationPause (p0);
+	}
+
+	private native void n_onAnimationPause (android.animation.Animator p0);
+
+
 	public void onAnimationRepeat (android.animation.Animator p0)
 	{
 		n_onAnimationRepeat (p0);
 	}
 
 	private native void n_onAnimationRepeat (android.animation.Animator p0);
+
+
+	public void onAnimationResume (android.animation.Animator p0)
+	{
+		n_onAnimationResume (p0);
+	}
+
+	private native void n_onAnimationResume (android.animation.Animator p0);
 
 
 	public void onAnimationEnd (android.animation.Animator p0)

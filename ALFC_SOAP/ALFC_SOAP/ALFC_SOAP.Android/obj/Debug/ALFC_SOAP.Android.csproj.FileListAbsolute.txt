@@ -19,3 +19,6 @@ C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\res\drawa
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\R.cs.flag
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\uploadflags.txt
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\ALFC_SOAP.dll.mdb
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\res\drawable\ic_action_cancel.png
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\res\drawable\ic_action_discard.png
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\res\drawable\ic_action_new.png

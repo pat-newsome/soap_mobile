@@ -14,6 +14,8 @@ namespace ALFC_SOAP.Entities
             set;
         }
 
+        public int BookId { get; set; }
+
         public string Name
         {
             get;

@@ -1,5 +1,5 @@
-﻿<xapCache source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\Bin\ARM\Debug\PhoneApp1_Debug_ARM.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="12/6/2014 8:37:22 AM">
-  <file source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\obj\ARM\Debug\ALFC_SOAP.WinPhone.dll" archivePath="ALFC_SOAP.WinPhone.dll" lastWriteTime="12/6/2014 8:37:18 AM" />
+﻿<xapCache source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\Bin\ARM\Debug\PhoneApp1_Debug_ARM.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="12/26/2014 9:55:33 AM">
+  <file source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\obj\ARM\Debug\ALFC_SOAP.WinPhone.dll" archivePath="ALFC_SOAP.WinPhone.dll" lastWriteTime="12/26/2014 9:55:32 AM" />
   <file source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="12/5/2014 4:38:16 PM" />
   <file source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="12/5/2014 4:38:16 PM" />
   <file source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="12/5/2014 4:38:16 PM" />
@@ -14,7 +14,7 @@
   <file source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\Bin\ARM\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="12/6/2014 8:37:22 AM" />
   <file source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\Bin\ARM\Debug\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="12/5/2014 4:38:16 PM" />
   <file source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\Bin\ARM\Debug\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="12/5/2014 4:38:16 PM" />
-  <file source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Debug\ALFC_SOAP.dll" archivePath="ALFC_SOAP.dll" lastWriteTime="12/5/2014 4:47:59 PM" />
+  <file source="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Debug\ALFC_SOAP.dll" archivePath="ALFC_SOAP.dll" lastWriteTime="12/26/2014 7:27:16 AM" />
   <file source="C:\Github\Develop\Soap\ALFC_SOAP\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="12/5/2014 4:38:20 PM" />
   <file source="C:\Github\Develop\Soap\ALFC_SOAP\packages\Xamarin.Forms.1.0.6186\lib\WP80\Xamarin.Forms.Core.dll" archivePath="Xamarin.Forms.Core.dll" lastWriteTime="12/5/2014 4:38:13 PM" />
   <file source="C:\Github\Develop\Soap\ALFC_SOAP\packages\Xamarin.Forms.1.0.6186\lib\WP80\Xamarin.Forms.Platform.WP8.dll" archivePath="Xamarin.Forms.Platform.WP8.dll" lastWriteTime="12/5/2014 4:38:13 PM" />
