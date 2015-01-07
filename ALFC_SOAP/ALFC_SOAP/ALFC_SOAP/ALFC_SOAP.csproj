@@ -66,6 +66,9 @@
     <Compile Include="Views\ReadingPlanView.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="CsvHelper">
+      <HintPath>..\..\packages\CsvHelper.2.10.0\lib\portable-sl4+wp71+windows8+net40\CsvHelper.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Forms.Core">
       <HintPath>..\..\packages\Xamarin.Forms.1.0.6186\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
@@ -77,6 +80,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Data\ReadingPlans.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

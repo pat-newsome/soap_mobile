@@ -14,6 +14,12 @@ namespace ALFC_SOAP.Entities
             set;
         }
 
+        public int PlanId
+        {
+            get;
+            set;
+        }
+
         public int BookId { get; set; }
 
         public string Name
@@ -28,6 +34,6 @@ namespace ALFC_SOAP.Entities
             set;
         }
 
-        public string Url { get; set; }
+        public string UrlSearch { get { return string.Format("{0} {1}", Name, Value); } }
     }
 }

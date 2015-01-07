@@ -208,11 +208,19 @@ namespace ALFC_SOAP
 
         async void OnResuming()
         {
-            // Delete transient data and state.
-            if (await FileHelper.ExistsAsync(App.TransientFilename))
+
+            try
             {
-                await FileHelper.DeleteFileAsync(App.TransientFilename);
+                if (await FileHelper.ExistsAsync(App.TransientFilename))
+                {// Delete transient data and state.
+                    await FileHelper.DeleteFileAsync(App.TransientFilename);
+                }
             }
+            catch (Exception)
+            {
+            
+            }
+            
         }
     }
 }

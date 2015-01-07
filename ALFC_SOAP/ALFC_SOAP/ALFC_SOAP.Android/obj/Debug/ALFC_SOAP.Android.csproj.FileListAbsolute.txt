@@ -22,3 +22,7 @@ C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\ALFC_SOAP
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\res\drawable\ic_action_cancel.png
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\res\drawable\ic_action_discard.png
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\res\drawable\ic_action_new.png
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\Data\ReadingPlans.csv
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\res\values\styles.xml
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\res\drawable\splash.png
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\res\drawable\white.png

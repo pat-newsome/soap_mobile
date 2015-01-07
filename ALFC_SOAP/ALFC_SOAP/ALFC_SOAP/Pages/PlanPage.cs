@@ -1,4 +1,5 @@
 ﻿using ALFC_SOAP.Common;
+using ALFC_SOAP.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,23 +11,23 @@ namespace ALFC_SOAP
 {
     class PlanPage : ContentPage
     {
-        int PlanId {get;set;}
+        ReadingPlan Plan { get; set; }
 
-        public PlanPage(int planId)
+        public PlanPage(ReadingPlan plan)
         {
-            PlanId = planId;
-            this.BackgroundColor = AppColors.White;
+            Plan= plan;
+            this.BackgroundColor = AppColors.Green;
             this.Content = PageLayout();
         }
 
-        private ScrollView PageLayout()
+        private StackLayout PageLayout()
         {
-            var view = new ScrollView { HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand };
-            var stack = new StackLayout();
+           
+            var stack = new StackLayout { HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand };
 
-            stack.Children.Add(new PlanView(PlanId));
-            view.Content = stack;
-            return view;
+            stack.Children.Add(new PlanView(Plan));
+            
+            return stack;
         }
     }
 }

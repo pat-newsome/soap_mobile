@@ -1,5 +1,6 @@
 ﻿using ALFC_SOAP.Common;
 using ALFC_SOAP.Data;
+using ALFC_SOAP.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,8 +25,8 @@ namespace ALFC_SOAP
 
         void ReadingPlanView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            Button btn = (Button)sender;
-            Navigation.PushAsync(new PlanPage((int)btn.CommandParameter));
+            var plan = (ReadingPlan)e.SelectedItem;
+            Navigation.PushAsync(new PlanPage(plan));
         }
     }
 }

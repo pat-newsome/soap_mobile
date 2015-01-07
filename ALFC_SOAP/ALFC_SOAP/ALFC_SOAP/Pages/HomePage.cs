@@ -15,12 +15,7 @@ namespace ALFC_SOAP
         {
             this.BackgroundColor = AppColors.BGPurple;
             
-            navigateCommand =
-                new Command<Type>(async (Type pageType) =>
-                {
-                    Page page = (Page)Activator.CreateInstance(pageType);
-                    await this.Navigation.PushAsync(page);
-                });
+            
 
             this.Content = this.BuildReading();
 
@@ -32,19 +27,42 @@ namespace ALFC_SOAP
                                          "Images/add.png"),
                 Order = ToolbarItemOrder.Primary
             };
+            ToolbarItem subItem = new ToolbarItem
+            {
+                Name = "Settings",
+                Icon = Device.OnPlatform("new.png",
+                                         "ic_action_new.png",
+                                         "Images/add.png"),
+            };
 
+            ToolbarItem subItem1 = new ToolbarItem
+            {
+                Name = "Settings",
+               
+                Order = ToolbarItemOrder.Secondary
+            };
+            ToolbarItem subItem2 = new ToolbarItem
+            {
+                Name = "Social Media",
+               
+                Order = ToolbarItemOrder.Secondary
+            };
             addNewItem.Activated += (sender, args) =>
             {
                 // Create unique filename.
                 DateTime datetime = DateTime.UtcNow;
-                string filename = datetime.ToString("yyyyMMddHHmmssfff") + ".soap";
+                string filename = datetime.ToString("yyyyMMddHHmmss") + ".soap";
 
                 // Navigate to new Page.
                 Soap page = new Soap(filename);
                 this.Navigation.PushAsync(new SoapPage(page));
             };
-
+            
             this.ToolbarItems.Add(addNewItem);
+            this.ToolbarItems.Add(subItem1);
+            this.ToolbarItems.Add(subItem2);
+            
+            
         }
 
         private ScrollView PageLayout()

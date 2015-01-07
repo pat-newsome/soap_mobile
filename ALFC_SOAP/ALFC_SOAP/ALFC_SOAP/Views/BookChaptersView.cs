@@ -64,7 +64,6 @@ namespace ALFC_SOAP
             stack.Padding = 4;
 
 
-
             Button button = new Button
             {
                 Text = i.ToString(),

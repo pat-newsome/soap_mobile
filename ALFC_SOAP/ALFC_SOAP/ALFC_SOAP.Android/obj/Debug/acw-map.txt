@@ -1,3 +1,4 @@
+ALFC_SOAP.Droid.SplashActivity;alfc_soap.droid.SplashActivity
 ALFC_SOAP.Droid.MainActivity;alfc_soap.droid.MainActivity
 Android.Support.V4.Content.Loader.IOnLoadCompleteListenerImplementor;mono.android.support.v4.content.Loader_OnLoadCompleteListenerImplementor
 Android.Support.V4.View.ViewPager.IOnPageChangeListenerImplementor;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor

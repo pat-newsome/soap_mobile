@@ -1,4 +1,6 @@
-﻿using ALFC_SOAP.Data;
+﻿using ALFC_SOAP.Common;
+using ALFC_SOAP.Data;
+using ALFC_SOAP.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,25 +10,35 @@ using Xamarin.Forms;
 
 namespace ALFC_SOAP
 {
-    class PlanView : ListView
+    class PlanView : StackLayout
     {
        
-        public PlanView(int planId)
+        public PlanView(ReadingPlan plan)
         {
-            var db = new ReadingDataInfo();
-            this.ItemsSource = db.GetList();
-            this.ItemSelected += ReadingPlanView_ItemSelected;
-            this.ItemTemplate = BaseListItemTemplate.Get();
+            this.Children.Add(new Label { Text = plan.Name, Font = Font.SystemFontOfSize(NamedSize.Large), BackgroundColor = AppColors.BGBlue, TextColor = AppColors.White });
+            this.Children.Add(new Label { Text = "             reading", Font = Font.SystemFontOfSize(NamedSize.Medium), BackgroundColor = AppColors.White, TextColor = AppColors.Blue });
+            this.Children.Add(BuildReadingList(plan.Id));
+            
         }
+
+        private ListView BuildReadingList(int planId)
+        {
+            var scroll = new ListView();
+            var db = new ReadingDataInfo();
+            scroll.ItemsSource = db.GetListReadings(planId);
+            scroll.ItemSelected += ReadingPlanView_ItemSelected;
+            scroll.ItemTemplate = BaseListItemTemplate.GetFullLabel(AppColors.BGGreen);
+            return scroll;
+        }
+
 
         void ReadingPlanView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            Button btn = (Button)sender;
-            int readingId = (int)btn.CommandParameter;
+            var reading = (Reading)e.SelectedItem;
+            
             DateTime datetime = DateTime.UtcNow;
-            string scripture = "3 John 1";
-            string fileName = string.Format("{0}_{1}.soap", datetime.ToString("yyyyMMddHHmmssfff"));
-            var soap = new Soap(fileName, scripture);
+            string fileName = string.Format("{0}_{1}.soap", reading.Name, datetime.ToString("yyyyMMddHHmm"));
+            var soap = new Soap(fileName, reading.UrlSearch);
             Navigation.PushAsync(new SoapPage(soap, false));
         }
     }

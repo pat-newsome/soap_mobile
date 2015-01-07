@@ -32,7 +32,31 @@ namespace ALFC_SOAP
             });
         }
 
-       
+        public static DataTemplate GetFullLabel(Color bgColor)
+        {
+            return new DataTemplate(() =>
+            {
+                Label ListItem = new Label();
+                ListItem.TextColor = AppColors.White;
+                ListItem.SetBinding(Label.TextProperty, new Binding("UrlSearch", BindingMode.OneWay, null, null, "{0}"));
+                ListItem.Font = Font.SystemFontOfSize(NamedSize.Medium);
+                ListItem.HorizontalOptions = LayoutOptions.FillAndExpand;
+                ListItem.VerticalOptions = LayoutOptions.FillAndExpand;
+                ListItem.BackgroundColor = bgColor;
+                ListItem.MinimumHeightRequest = 120;
+                return new ViewCell
+                {
+                    View = new StackLayout
+                    {
+                        Orientation = StackOrientation.Horizontal,
+                        VerticalOptions = LayoutOptions.CenterAndExpand,
+                        Padding = new Thickness(5, 0, 10, 5),
+                        Spacing = 0,
+                        Children = { ListItem }
+                    }
+                };
+            });
+        }
         public static DataTemplate GetLabel(Color bgColor)
         {
             return new DataTemplate(() =>

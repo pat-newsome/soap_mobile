@@ -80,6 +80,7 @@
   <ItemGroup>
     <Compile Include="FileHelper.cs" />
     <Compile Include="LifecycleHelper.cs" />
+    <Compile Include="SplashActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,6 +98,11 @@
     <AndroidResource Include="Resources\Drawable\ic_action_cancel.png" />
     <AndroidResource Include="Resources\Drawable\ic_action_discard.png" />
     <AndroidResource Include="Resources\Drawable\ic_action_new.png" />
+    <AndroidResource Include="Resources\values\Styles.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Drawable\splash.png" />
+    <AndroidResource Include="Resources\Drawable\white.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ALFC_SOAP\ALFC_SOAP.csproj">

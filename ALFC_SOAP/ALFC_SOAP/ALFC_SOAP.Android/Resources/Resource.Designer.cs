@@ -56,12 +56,37 @@ namespace ALFC_SOAP.Droid
 			// aapt resource value: 0x7f020003
 			public const int Icon = 2130837507;
 			
+			// aapt resource value: 0x7f020004
+			public const int splash = 2130837508;
+			
+			// aapt resource value: 0x7f020005
+			public const int white = 2130837509;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 			}
 			
 			private Drawable()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7f030001
+			public const int Theme_Default = 2130903041;
+			
+			// aapt resource value: 0x7f030000
+			public const int Theme_Splash = 2130903040;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
 			{
 			}
 		}

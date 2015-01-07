@@ -1,0 +1,2 @@
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\ALFC_SOAP.WinPhone.csproj;neutral
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.csproj;neutral
