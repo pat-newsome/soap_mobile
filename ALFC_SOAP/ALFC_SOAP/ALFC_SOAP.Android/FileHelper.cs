@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(ALFC_SOAP.Droid.FileHelper))]
-
 namespace ALFC_SOAP.Droid
 {
     
-    class FileHelper : IFileHelper
+    public class FileHelper : IFileHelper
     {
         public Task<bool> ExistsAsync(string filename)
         {

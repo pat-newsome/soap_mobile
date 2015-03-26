@@ -14,7 +14,9 @@
     <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <NuGetPackageImportStamp>8856f889</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>65d1d887</NuGetPackageImportStamp>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -38,46 +40,35 @@
     <Compile Include="Data\IDataInfo.cs" />
     <Compile Include="Data\IDataListItem.cs" />
     <Compile Include="Data\ReadingPlanData.cs" />
-    <Compile Include="Entities\ReadingPlan.cs" />
-    <Compile Include="Entities\Soap.cs" />
-    <Compile Include="Entities\SoapFolder.cs" />
-    <Compile Include="Helpers\FileHelper.cs" />
-    <Compile Include="Helpers\IFileHelper.cs" />
+    <Compile Include="Model\ReadingPlan.cs" />
+    <Compile Include="Model\Soap.cs" />
+    <Compile Include="Model\SoapFolder.cs" />
     <Compile Include="Helpers\ILifecycleHelper.cs" />
-    <Compile Include="Pages\BookChaptersPage.cs" />
-    <Compile Include="Pages\BooksPage.cs" />
-    <Compile Include="Pages\EntriesPage.cs" />
-    <Compile Include="Pages\PlanPage.cs" />
-    <Compile Include="Pages\SoapPage.cs" />
-    <Compile Include="Pages\WebPage.cs" />
-    <Compile Include="Views\BaseListItemTemplate.cs" />
-    <Compile Include="Views\BookChaptersView.cs" />
-    <Compile Include="Views\BookListView.cs" />
+    <Compile Include="ViewModel\FileSystemViewModel.cs" />
+    <Compile Include="ViewModel\SettingsView.cs" />
+    <Compile Include="Views\BookChaptersPage.cs" />
+    <Compile Include="Views\BooksPage.cs" />
+    <Compile Include="Views\EntriesPage.cs" />
+    <Compile Include="Views\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PlanPage.cs" />
+    <Compile Include="Views\SoapPage.cs" />
+    <Compile Include="Views\WebPage.cs" />
+    <Compile Include="ViewModel\BaseListItemTemplate.cs" />
+    <Compile Include="ViewModel\BookChaptersView.cs" />
+    <Compile Include="ViewModel\BookListView.cs" />
     <Compile Include="Common\AppColors.cs" />
     <Compile Include="Data\BibleDataInfo.cs" />
     <Compile Include="Data\BookInfo.cs" />
     <Compile Include="Data\ReadingDataInfo.cs" />
-    <Compile Include="Entities\Book.cs" />
-    <Compile Include="Entities\Reading.cs" />
-    <Compile Include="Pages\HomePage.cs" />
+    <Compile Include="Model\Book.cs" />
+    <Compile Include="Model\Reading.cs" />
+    <Compile Include="Views\HomePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\JournalEntriesView.cs" />
-    <Compile Include="Views\PlanView.cs" />
-    <Compile Include="Views\ReadingPlanView.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="CsvHelper">
-      <HintPath>..\..\packages\CsvHelper.2.10.0\lib\portable-sl4+wp71+windows8+net40\CsvHelper.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Core">
-      <HintPath>..\..\packages\Xamarin.Forms.1.0.6186\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Labs">
-      <HintPath>..\..\..\..\AisPartnerPortal\External References\Xamarin-forms-lab\Xamarin.Forms.Labs.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Xaml">
-      <HintPath>..\..\packages\Xamarin.Forms.1.0.6186\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.Xaml.dll</HintPath>
-    </Reference>
+    <Compile Include="ViewModel\JournalEntriesView.cs" />
+    <Compile Include="ViewModel\PlanView.cs" />
+    <Compile Include="ViewModel\ReadingPlanView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\ReadingPlans.csv">
@@ -85,15 +76,51 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Views\SettingsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Acr.XamForms.Mobile">
+      <HintPath>..\..\packages\Acr.XamForms.Mobile.2.0.4\lib\portable-win+net45+MonoAndroid10+Xamarin.iOS10+wp8\Acr.XamForms.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.XamForms.UserDialogs">
+      <HintPath>..\..\packages\Acr.XamForms.UserDialogs.3.0.4\lib\portable-win+net45+MonoAndroid10+Xamarin.iOS10+wp8\Acr.XamForms.UserDialogs.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac">
+      <HintPath>..\..\packages\Autofac.3.5.2\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight">
+      <HintPath>..\..\packages\MvvmLightLibs.5.1.1.0\lib\portable-net45+wp8+wpa81+netcore45+monoandroid1+xamarin.ios10\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras">
+      <HintPath>..\..\packages\MvvmLightLibs.5.1.1.0\lib\portable-net45+wp8+wpa81+netcore45+monoandroid1+xamarin.ios10\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.8\lib\portable-net45+wp80+win8+wpa81+aspnetcore50\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\..\packages\Xamarin.Forms.1.4.0.6341\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\..\packages\Xamarin.Forms.1.4.0.6341\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
-  <Import Project="..\..\packages\Xamarin.Forms.1.0.6186\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.1.0.6186\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.1.0.6186\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.1.0.6186\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets'))" />
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.1.4.0.6341\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.1.4.0.6341\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets'))" />
   </Target>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Import Project="..\..\packages\Xamarin.Forms.1.4.0.6341\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.1.4.0.6341\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

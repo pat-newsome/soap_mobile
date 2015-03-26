@@ -1,9 +1,22 @@
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\ALFC_SOAP.Android.dll
+C:\Github\Develop\Soap\ALFC_SOAP\packages\Acr.XamForms.Mobile.2.0.4\lib\MonoAndroid10\Acr.XamForms.Mobile.dll
+C:\Github\Develop\Soap\ALFC_SOAP\packages\Acr.XamForms.Mobile.2.0.4\lib\MonoAndroid10\Acr.XamForms.Mobile.Droid.dll
+C:\Github\Develop\Soap\ALFC_SOAP\packages\Acr.XamForms.UserDialogs.3.0.4\lib\MonoAndroid10\Acr.XamForms.UserDialogs.dll
+C:\Github\Develop\Soap\ALFC_SOAP\packages\Acr.XamForms.UserDialogs.3.0.4\lib\MonoAndroid10\Acr.XamForms.UserDialogs.Droid.dll
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Debug\ALFC_SOAP.dll
-C:\Github\Develop\Soap\ALFC_SOAP\packages\Xamarin.Android.Support.v4.19.0.2\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll
-C:\Github\Develop\Soap\ALFC_SOAP\packages\Xamarin.Forms.1.0.6186\lib\MonoAndroid10\Xamarin.Forms.Core.dll
-C:\Github\Develop\Soap\ALFC_SOAP\packages\Xamarin.Forms.1.0.6186\lib\MonoAndroid10\Xamarin.Forms.Platform.Android.dll
-C:\Github\Develop\Soap\ALFC_SOAP\packages\Xamarin.Forms.1.0.6186\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll
+C:\Github\Develop\Soap\ALFC_SOAP\packages\Acr.XamForms.UserDialogs.3.0.4\lib\MonoAndroid10\AndHUD.dll
+C:\Github\Develop\Soap\ALFC_SOAP\packages\Autofac.3.5.2\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Autofac.dll
+C:\Github\Develop\Soap\ALFC_SOAP\packages\Xamarin.Forms.1.4.0.6341\lib\MonoAndroid10\FormsViewGroup.dll
+C:\Github\Develop\Soap\ALFC_SOAP\packages\MvvmLightLibs.5.1.1.0\lib\monoandroid1\GalaSoft.MvvmLight.dll
+C:\Github\Develop\Soap\ALFC_SOAP\packages\MvvmLightLibs.5.1.1.0\lib\monoandroid1\GalaSoft.MvvmLight.Extras.dll
+C:\Github\Develop\Soap\ALFC_SOAP\packages\MvvmLightLibs.5.1.1.0\lib\monoandroid1\GalaSoft.MvvmLight.Platform.dll
+C:\Github\Develop\Soap\ALFC_SOAP\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll
+C:\Github\Develop\Soap\ALFC_SOAP\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll
+C:\Github\Develop\Soap\ALFC_SOAP\packages\Xamarin.Android.Support.v4.21.0.3.0\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll
+C:\Github\Develop\Soap\ALFC_SOAP\packages\Xamarin.Forms.1.4.0.6341\lib\MonoAndroid10\Xamarin.Forms.Core.dll
+C:\Github\Develop\Soap\ALFC_SOAP\packages\Xamarin.Forms.1.4.0.6341\lib\MonoAndroid10\Xamarin.Forms.Platform.Android.dll
+C:\Github\Develop\Soap\ALFC_SOAP\packages\Xamarin.Forms.1.4.0.6341\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll
+C:\Github\Develop\Soap\ALFC_SOAP\packages\Acr.XamForms.Mobile.2.0.4\lib\MonoAndroid10\Xamarin.Mobile.dll
 C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\Facades\System.Collections.Concurrent.dll
 C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\Facades\System.Collections.dll
 C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\Facades\System.ComponentModel.Annotations.dll

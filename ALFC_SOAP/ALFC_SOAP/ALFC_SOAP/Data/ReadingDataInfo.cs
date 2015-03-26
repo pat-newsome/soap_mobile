@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using ALFC_SOAP.Entities;
-using Xamarin.Forms.Labs.Data;
-using CsvHelper;
+using ALFC_SOAP.Model;
 
 namespace ALFC_SOAP.Data
 {
@@ -345,8 +343,9 @@ namespace ALFC_SOAP.Data
             var readings = new List<IDataListItem>();
             //TODO: pull these from a file
             readings.Add(new ReadingPlan { Id = 1, Name = "180 days of Abiding New Testament" , Value= "New Testament" });
-            readings.Add(new ReadingPlan { Id = 2, Name = "180 days of Abiding Wisdom Liteture" ,  Value = "Wisdom " });
+            readings.Add(new ReadingPlan { Id = 2, Name = "180 days of Abiding Wisdom Literature" ,  Value = "Wisdom " });
             readings.Add(new ReadingPlan { Id = 3, Name = "Prophecy of Christ" ,  Value = "Revelation, Ezkial" });
+            readings.Add(new ReadingPlan { Id = 4, Name = "Torah", Value = "Genesis, Exodus, Leviticus, Numbers, Deuteronomy" });
             return readings;
         }
 

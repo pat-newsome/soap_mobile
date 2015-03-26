@@ -1,0 +1,14 @@
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Release\Data\ReadingPlans.csv
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Release\ALFC_SOAP.dll
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Release\ALFC_SOAP.pdb
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Release\CsvHelper.dll
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Release\Xamarin.Forms.Core.dll
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Release\Xamarin.Forms.Labs.dll
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Release\Xamarin.Forms.Xaml.dll
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Release\ExifLib.dll
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Release\CsvHelper.pdb
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Release\CsvHelper.xml
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Release\Xamarin.Forms.Core.xml
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Release\Xamarin.Forms.Xaml.xml
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\obj\Release\ALFC_SOAP.dll
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\obj\Release\ALFC_SOAP.pdb

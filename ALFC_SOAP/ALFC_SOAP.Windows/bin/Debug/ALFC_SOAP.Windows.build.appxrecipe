@@ -19,14 +19,29 @@
     <AppxPackagedFile Include="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP.Windows\bin\Debug\ALFC_SOAP.Windows.exe">
       <PackagePath>ALFC_SOAP.Windows.exe</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Github\Develop\Soap\ALFC_SOAP\packages\Acr.XamForms.Mobile.2.0.4\lib\portable-win+net45+MonoAndroid10+Xamarin.iOS10+wp8\Acr.XamForms.Mobile.dll">
+      <PackagePath>Acr.XamForms.Mobile.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Github\Develop\Soap\ALFC_SOAP\packages\Acr.XamForms.UserDialogs.3.0.4\lib\portable-win+net45+MonoAndroid10+Xamarin.iOS10+wp8\Acr.XamForms.UserDialogs.dll">
+      <PackagePath>Acr.XamForms.UserDialogs.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Debug\ALFC_SOAP.dll">
       <PackagePath>ALFC_SOAP.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Github\Develop\Xamarin-Forms-Labs\ReleaseBuild\Xamarin.Forms.Core.dll">
+    <AppxPackagedFile Include="C:\Github\Develop\Soap\ALFC_SOAP\packages\Autofac.3.5.2\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Autofac.dll">
+      <PackagePath>Autofac.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Github\Develop\Soap\ALFC_SOAP\packages\Newtonsoft.Json.6.0.1\lib\netcore45\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Github\Develop\Soap\ALFC_SOAP\packages\Xamarin.Forms.1.4.0.6341\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Core.dll">
       <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Github\Develop\AisPartnerPortal\External References\Xamarin-forms-lab\Xamarin.Forms.Labs.dll">
       <PackagePath>Xamarin.Forms.Labs.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Github\Develop\Soap\ALFC_SOAP\packages\Xamarin.Forms.1.4.0.6341\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Xaml.dll">
+      <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Github\Develop\AisPartnerPortal\External References\Xamarin-forms-lab\ExifLib.dll">
       <PackagePath>ExifLib.dll</PackagePath>

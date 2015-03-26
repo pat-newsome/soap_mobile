@@ -1,0 +1,7 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <ReferenceAssembly PathName="c:\github\develop\soap\alfc_soap\alfc_soap\alfc_soap\bin\release\alfc_soap.dll" HashGuid="25e6ccca-f72a-6a7a-2823-ee19ac3ab54b" />
+    <ReferenceAssembly PathName="c:\github\develop\xamarin-forms-labs\releasebuild\xamarin.forms.core.dll" HashGuid="6bb018af-b1f3-d2dc-56bc-1df5ec3a0d38" />
+    <ReferenceAssembly PathName="c:\github\develop\aispartnerportal\external references\xamarin-forms-lab\xamarin.forms.labs.dll" HashGuid="c5e882b6-2f06-54cf-30c2-3171d293aeb4" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

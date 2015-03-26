@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ALFC_SOAP.Entities;
+using ALFC_SOAP.Model;
 
 namespace ALFC_SOAP.Data
 {

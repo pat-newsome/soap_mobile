@@ -2,7 +2,7 @@ package xamarin.forms.platform.android;
 
 
 public class ListViewAdapter
-	extends android.widget.BaseAdapter
+	extends xamarin.forms.platform.android.CellAdapter
 	implements
 		mono.android.IGCUserPeer
 {
@@ -16,7 +16,7 @@ public class ListViewAdapter
 			"n_getItemId:(I)J:GetGetItemId_IHandler\n" +
 			"n_isEnabled:(I)Z:GetIsEnabled_IHandler\n" +
 			"";
-		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.ListViewAdapter, Xamarin.Forms.Platform.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", ListViewAdapter.class, __md_methods);
+		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.ListViewAdapter, Xamarin.Forms.Platform.Android, Version=1.4.0.0, Culture=neutral, PublicKeyToken=null", ListViewAdapter.class, __md_methods);
 	}
 
 
@@ -24,7 +24,14 @@ public class ListViewAdapter
 	{
 		super ();
 		if (getClass () == ListViewAdapter.class)
-			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.ListViewAdapter, Xamarin.Forms.Platform.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.ListViewAdapter, Xamarin.Forms.Platform.Android, Version=1.4.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+	}
+
+	public ListViewAdapter (android.content.Context p0) throws java.lang.Throwable
+	{
+		super ();
+		if (getClass () == ListViewAdapter.class)
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.ListViewAdapter, Xamarin.Forms.Platform.Android, Version=1.4.0.0, Culture=neutral, PublicKeyToken=null", "Android.Content.Context, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065", this, new java.lang.Object[] { p0 });
 	}
 
 

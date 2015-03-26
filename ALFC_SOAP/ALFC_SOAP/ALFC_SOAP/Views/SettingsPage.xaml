@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ALFC_SOAP.SettingsPage">
+ 
+  <ScrollView>
+          <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+  <Grid  RowSpacing="4" ColumnSpacing="4" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="2">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*"  />
+    </Grid.ColumnDefinitions>
+
+    <Label Text="Your email"
+           Grid.Row="0" Grid.Column="0"
+           TextColor= "Gray"
+            FontAttributes="Bold"
+           XAlign="End"
+           YAlign="Center" />
+    <Entry  Grid.Row="0" Grid.Column="1"
+            Text="{Binding UserEmail, Mode=TwoWay}"
+            Keyboard="Email"
+            TextColor="{Binding EntryTextColor}"
+            BackgroundColor="{Binding EntryBgColor}"
+            MinimumHeightRequest="30"
+            VerticalOptions="CenterAndExpand"
+              ></Entry>
+    <Label Text="Selected Reading Plan"
+           Grid.Row="1" Grid.Column="0"
+           TextColor= "Gray"
+            FontAttributes="Bold"
+           XAlign="End"
+           YAlign="Center" />
+    <Entry  Grid.Row="1" Grid.Column="1"
+            Text="{Binding ReadingPlan, Mode=TwoWay}"
+            Keyboard="Default"
+            TextColor="{Binding EntryTextColor}"
+            BackgroundColor="{Binding EntryBgColor}"
+            MinimumHeightRequest="30"
+            VerticalOptions="CenterAndExpand"
+              ></Entry>
+    <Label Text="Bible version"
+           Grid.Row="2" Grid.Column="0"
+           TextColor= "Gray"
+            FontAttributes="Bold"
+           XAlign="End"
+           YAlign="Center" />
+    <Button Text="{Binding BibleVersion, Mode=TwoWay}"
+            Grid.Row="2" Grid.Column="1" />
+    <Button x:Name="btnCancel" Grid.Row="4" Grid.Column="0" 
+      Text="Cancel"  />
+    <Button x:Name="btnComplete" Grid.Row="4" Grid.Column="1" 
+      Text="Save"  />
+  </Grid>
+  </ScrollView>
+</ContentPage>

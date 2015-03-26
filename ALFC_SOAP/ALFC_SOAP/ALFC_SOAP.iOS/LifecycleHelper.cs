@@ -1,5 +1,5 @@
-﻿using System;
-using MonoTouch.UIKit;
+using System;
+using UIKit;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(ALFC_SOAP.iOS.LifecycleHelper))]

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DEVMASTER</Machine>
+    <WindowsUser>pat.newsome</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>19a7f3a0-c1ce-4ffc-a970-26c67c015f31</PackageIdentityName>
+    <IntermediateOutputPath>C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP.Windows\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>A145738EF7BAFCA87025F23AEA5FED279D8C8FF29C8FF1DA42C2FCA0788B8FCB</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>19a7f3a0-c1ce-4ffc-a970-26c67c015f31_1.0.0.0_neutral__853qxbc3fer26</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>19a7f3a0-c1ce-4ffc-a970-26c67c015f31_853qxbc3fer26!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>19a7f3a0-c1ce-4ffc-a970-26c67c015f31</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=pat.newsome</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP.Windows\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-03-16T13:20:29.195</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP.Windows\bin\Debug\ALFC_SOAP.Windows.exe">
+      <PackagePath>ALFC_SOAP.Windows.exe</PackagePath>
+      <Modified>2015-03-16T13:20:28.179</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Debug\ALFC_SOAP.dll">
+      <PackagePath>ALFC_SOAP.dll</PackagePath>
+      <Modified>2015-03-13T14:10:34.304</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Github\Develop\Xamarin-Forms-Labs\ReleaseBuild\Xamarin.Forms.Core.dll">
+      <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
+      <Modified>2014-12-05T20:28:16.009</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Github\Develop\AisPartnerPortal\External References\Xamarin-forms-lab\Xamarin.Forms.Labs.dll">
+      <PackagePath>Xamarin.Forms.Labs.dll</PackagePath>
+      <Modified>2015-02-18T22:39:59.631</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Debug\Xamarin.Forms.Xaml.dll">
+      <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
+      <Modified>2015-03-01T15:02:44.612</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Github\Develop\AisPartnerPortal\External References\Xamarin-forms-lab\ExifLib.dll">
+      <PackagePath>ExifLib.dll</PackagePath>
+      <Modified>2015-02-18T22:39:59.568</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T14:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T14:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T14:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T14:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP.Windows\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2015-01-05T23:05:58.255</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP.Windows\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2015-01-05T23:05:58.263</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP.Windows\bin\Debug\ALFC_SOAP.Windows.xr.xml">
+      <PackagePath>ALFC_SOAP.Windows.xr.xml</PackagePath>
+      <Modified>2015-01-05T23:05:58.101</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP.Windows\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-03-16T13:20:28.757</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

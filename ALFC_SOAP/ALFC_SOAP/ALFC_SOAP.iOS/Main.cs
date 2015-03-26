@@ -1,9 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
+using Acr.XamForms.UserDialogs.iOS;
+using Acr.XamForms.Mobile.iOS.Net;
 
 namespace ALFC_SOAP.iOS
 {
@@ -15,6 +17,10 @@ namespace ALFC_SOAP.iOS
             // if you want to use a different Application Delegate class from "AppDelegate"
             // you can specify it here.
             UIApplication.Main(args, null, "AppDelegate");
+            new UserDialogService();
+            new NetworkService();
+         
+
         }
     }
 }
