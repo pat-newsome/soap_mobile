@@ -13,14 +13,16 @@ using Xamarin.Forms;
 
 namespace ALFC_SOAP.WinPhone
 {
-    public partial class MainPage : PhoneApplicationPage
+    public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage
     {
         public MainPage()
         {
             InitializeComponent();
 
             Forms.Init();
-            Content = ALFC_SOAP.App.GetMainPage().ConvertPageToUIElement(this);
+            SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
+            LoadApplication(new ALFC_SOAP.App());
+            //Content = ALFC_SOAP.App.Container.GetMainPage().ConvertPageToUIElement(this);
         }
     }
 }

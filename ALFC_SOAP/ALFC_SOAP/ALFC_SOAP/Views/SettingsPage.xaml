@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ALFC_SOAP.SettingsPage">
- 
+             x:Class="ALFC_SOAP.SettingsPage" BackgroundColor="White">
+  
   <ScrollView>
           <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
   <Grid  RowSpacing="4" ColumnSpacing="4" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="2">
@@ -50,12 +50,18 @@
             FontAttributes="Bold"
            XAlign="End"
            YAlign="Center" />
-    <Button Text="{Binding BibleVersion, Mode=TwoWay}"
-            Grid.Row="2" Grid.Column="1" />
-    <Button x:Name="btnCancel" Grid.Row="4" Grid.Column="0" 
-      Text="Cancel"  />
+    <Button x:Name="bibleVersionBtn"
+            Text="{Binding BibleVersion, Mode=TwoWay}"
+            Grid.Row="2" Grid.Column="1"
+            CommandParameter="BIBLEVERSIONS"
+            Clicked="ExtendedButton_Clicked"
+            />
+    <Button x:Name="btnCancel" Grid.Row="4" Grid.Column="0"
+            Text="Cancel"
+            Clicked="Done_Clicked"  />
     <Button x:Name="btnComplete" Grid.Row="4" Grid.Column="1" 
-      Text="Save"  />
+            Text="Save"
+            Clicked="Done_Clicked"/>
   </Grid>
   </ScrollView>
 </ContentPage>

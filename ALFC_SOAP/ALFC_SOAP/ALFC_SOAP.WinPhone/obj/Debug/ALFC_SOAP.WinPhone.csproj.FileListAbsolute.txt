@@ -1,0 +1,6 @@
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\obj\Debug\ALFC_SOAP.WinPhone.csprojResolveAssemblyReference.cache
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\obj\Debug\App.g.cs
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\obj\Debug\MainPage.g.cs
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\obj\Debug\ALFC_SOAP.WinPhone.g.resources
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\obj\Debug\ALFC_SOAP.WinPhone.Resources.AppResources.resources
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.WinPhone\obj\Debug\ALFC_SOAP.WinPhone.csproj.GenerateResource.Cache

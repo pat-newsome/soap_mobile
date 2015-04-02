@@ -15,10 +15,16 @@ namespace ALFC_SOAP
             InitializeComponent();
         }
 
-        void Save_Clicked(object sender, EventArgs e)
+        void Done_Clicked(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
             Navigation.PopModalAsync();
+        }
+
+        void ExtendedButton_Clicked(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            Navigation.PushModalAsync(new DropdownListPage(btn, btn.CommandParameter.ToString(), ""));
         }
     }
 }

@@ -13,13 +13,15 @@ namespace ALFC_SOAP.Model
         
         public Soap(string filename)
         {
-            this.Filename = filename;
+            this.Filename = filename.Trim().Replace(" ", "_");
         }
+
         public Soap(string filename, string scripture)
         {
-            this.Filename = filename;
+            this.Filename = filename.Trim().Replace(" ", "_");
             this.Scripture = scripture;
         }
+
         public string Filename { private set; get; }
 
         public string Application
@@ -73,7 +75,6 @@ namespace ALFC_SOAP.Model
             get { return scripture; }
         }
 
-
         public string Identifier
         {
             private set { Set(ref identifier, value); }
@@ -104,28 +105,36 @@ namespace ALFC_SOAP.Model
             return truncated;
         }
 
-        public Task SaveAsync()
+        public void SaveAsync()
         {
-            string text = this.Scripture + "|" + this.Observation + "|" + this.Application + "|" + this.Prayer;
-            return null;//FileHelper.WriteTextAsync(this.Filename, text);
+            string text = this.Identifier + "|" + this.Scripture + "|" + this.Observation + "|" + this.Application + "|" + this.Prayer;
+            FileHelper.WriteText(this.Filename, text);
         }
 
-        public async Task LoadAsync()
+        public void LoadAsync()
         {
-            string text = "";// await FileHelper.ReadTextAsync(this.Filename);
+            string text = FileHelper.ReadText(this.Filename);
 
             string[] soaptext = text.Split('|');
-            // Break string into Title and Text.
-            int index = int.Parse(soaptext[0]);
-            this.Scripture = soaptext[1];
-            this.Observation = soaptext[2];
-            this.Application = soaptext[3];
-            this.Prayer = soaptext[4];
+            if (soaptext.Length > 4)
+            {
+                this.Identifier = soaptext[0];
+                this.Scripture = soaptext[1];
+                this.Observation = soaptext[2];
+                this.Application = soaptext[3];
+                this.Prayer = soaptext[4];
+            }
+            else
+            {
+                string showText = this.Filename.Substring(0, this.Filename.IndexOf("20")).Replace('_', ' ');
+                this.Identifier = showText;
+                this.Scripture = showText;
+            }
         }
 
-        public async Task DeleteAsync()
+        public void DeleteAsync()
         {
-            //await FileHelper.DeleteFileAsync(this.Filename);
+            FileHelper.DeleteFile(this.Filename);
         }
 
         

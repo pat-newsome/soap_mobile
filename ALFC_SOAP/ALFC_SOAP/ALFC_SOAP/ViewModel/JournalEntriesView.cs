@@ -13,7 +13,7 @@ namespace ALFC_SOAP.Views
 
         public JournalEntriesView()
         {
-            
+            App.SoapFolder.Refresh();
            this.ItemsSource = App.SoapFolder.SoapMessages;
            this.ItemTemplate = new DataTemplate(typeof(TextCell));
            this.VerticalOptions = LayoutOptions.FillAndExpand;
@@ -29,7 +29,7 @@ namespace ALFC_SOAP.Views
 
                     // Navigate to NotePage.
                     var soap = (Soap)args.SelectedItem;
-                    this.Navigation.PushAsync(new SoapPage(soap, true));
+                    this.Navigation.PushAsync(new SoapPage(soap, soap.Identifier, true));
                 }
             };
         }

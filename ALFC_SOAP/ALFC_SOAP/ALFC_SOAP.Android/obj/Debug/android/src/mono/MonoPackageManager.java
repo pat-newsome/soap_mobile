@@ -79,7 +79,6 @@ class MonoPackageManager_Resources {
 		"GalaSoft.MvvmLight.dll",
 		"GalaSoft.MvvmLight.Extras.dll",
 		"GalaSoft.MvvmLight.Platform.dll",
-		"Microsoft.Practices.ServiceLocation.dll",
 		"Newtonsoft.Json.dll",
 		"Xamarin.Android.Support.v4.dll",
 		"Xamarin.Forms.Core.dll",
@@ -135,6 +134,7 @@ class MonoPackageManager_Resources {
 		"System.Xml.ReaderWriter.dll",
 		"System.Xml.XDocument.dll",
 		"System.Xml.XmlSerializer.dll",
+		"Microsoft.Practices.ServiceLocation.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

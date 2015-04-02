@@ -13,9 +13,11 @@ namespace ALFC_SOAP
         bool isEdit;
         IFileSystem fileSystem = DependencyService.Get<IFileSystem>();
         ILifecycleHelper helper = DependencyService.Get<ILifecycleHelper>();
-
-        public SoapPage(Soap soap, bool isEdit = false)
+        string SearchTerm = "";
+        public SoapPage(Soap soap, string searchTerm, bool isEdit = false)
         {
+            this.SearchTerm = searchTerm;
+            BuildToolBar();
             // Initialize Note object
             this.soapmessage= soap;
             this.isEdit = isEdit;
@@ -77,7 +79,6 @@ namespace ALFC_SOAP
             {
                 Children = 
                 {
-                    
                     new Label { Text = "Scripture:" },
                     entry,
                     new Label { Text = "Observation:" },
@@ -111,9 +112,7 @@ namespace ALFC_SOAP
                                                                "Yes", "No");
                         if (confirm)
                         {
-                            // Reload note.
-                            await soapmessage.LoadAsync();
-
+                            
                             // Return to home page.
                             await this.Navigation.PopAsync();
                         }
@@ -139,7 +138,8 @@ namespace ALFC_SOAP
                         if (confirm)
                         {
                             // Delete Note file and remove from collection.
-                            await soapmessage.DeleteAsync();
+                            if(FileHelper.Exists(soapmessage.Filename))
+                                FileHelper.DeleteFile(soapmessage.Filename);
                             App.SoapFolder.SoapMessages.Remove(soap);
 
                             // Return to home page.
@@ -157,10 +157,29 @@ namespace ALFC_SOAP
             this.Content = scrollView;
         }
 
+        private void BuildToolBar()
+        {
+            ToolbarItem readItem = new ToolbarItem
+            {
+
+                //Icon = Device.OnPlatform("view.png",
+                //                         "ic_action_view.png",
+                //                         "Images/view.png"),
+                Order = ToolbarItemOrder.Primary,
+                Text = "read"
+            };
+            readItem.Clicked += (sender, args) =>
+            {
+                Navigation.PushAsync(new WebPage(SearchTerm, true));
+            };
+            this.ToolbarItems.Add(readItem);
+        }
+
         async void savebtn_Clicked(object sender, EventArgs e)
         {
-           
-            await Navigation.PushAsync(new EntriesPage());
+           await this.Navigation.PopAsync();
+           await Navigation.PushAsync(new EntriesPage());
+            
         }
 
         protected override void OnAppearing()
@@ -205,12 +224,14 @@ namespace ALFC_SOAP
                          soapmessage.Application  + "|" +
                          soapmessage.Prayer;
 
-            // WriteTextAsync in separate thread.
             Task task = Task.Run(() =>
                 {
-                    var tempFile = fileSystem.Temp.CreateFile(App.TransientFilename);
-                    var stream = tempFile.OpenWriteAsync();
+
+                    soapmessage.SaveAsync();
+                    //var tempFile = fileSystem.Public.CreateFile(App.TransientFilename);
+                    //var stream = tempFile.OpenWriteAsync();
                     //stream.
+                    //stream.CreationOptions
                    //this.fil.WriteTextAsync(App.TransientFilename, str);
                 });
 

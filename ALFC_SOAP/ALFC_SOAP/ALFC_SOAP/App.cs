@@ -45,8 +45,10 @@ namespace ALFC_SOAP
 
             Container = builder.Build();
             IFileSystem fs = (IFileSystem)Container.Resolve(typeof(IFileSystem));
+
+            ISettings settings = (ISettings)Container.Resolve(typeof(ISettings));
             soapFolder = new SoapFolder(fs);
-            this.MainPage = new NavigationPage(new HomePage());
+            this.MainPage = new NavigationPage(new HomePage(settings));
         }
 
         private static void RegisterXamService<T>(ContainerBuilder builder) where T : class

@@ -37,17 +37,24 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Common\Constants.cs" />
+    <Compile Include="Data\BibleVersions.cs" />
     <Compile Include="Data\IDataInfo.cs" />
     <Compile Include="Data\IDataListItem.cs" />
     <Compile Include="Data\ReadingPlanData.cs" />
+    <Compile Include="Helpers\FileHelper.cs" />
+    <Compile Include="Model\Bible.cs" />
     <Compile Include="Model\ReadingPlan.cs" />
+    <Compile Include="Model\SelectListItem.cs" />
     <Compile Include="Model\Soap.cs" />
     <Compile Include="Model\SoapFolder.cs" />
     <Compile Include="Helpers\ILifecycleHelper.cs" />
     <Compile Include="ViewModel\FileSystemViewModel.cs" />
-    <Compile Include="ViewModel\SettingsView.cs" />
+    <Compile Include="ViewModel\SettingsViewModel.cs" />
+    <Compile Include="ViewModel\BiblesListView.cs" />
     <Compile Include="Views\BookChaptersPage.cs" />
     <Compile Include="Views\BooksPage.cs" />
+    <Compile Include="Views\DropDownListPage.cs" />
     <Compile Include="Views\EntriesPage.cs" />
     <Compile Include="Views\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>

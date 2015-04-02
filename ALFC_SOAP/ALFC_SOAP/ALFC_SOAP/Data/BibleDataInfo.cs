@@ -26,7 +26,6 @@ namespace ALFC_SOAP.Data
             {
                 string[] bookinfo = books[i].Split(',');
                 booklist.Add(new Book(i, bookinfo[0], bookinfo[0], bookinfo[1], int.Parse(bookinfo[2])));
-
             }
         }
 

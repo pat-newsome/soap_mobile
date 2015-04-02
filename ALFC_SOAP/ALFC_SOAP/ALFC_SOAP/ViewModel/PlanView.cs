@@ -37,9 +37,9 @@ namespace ALFC_SOAP
             var reading = (Reading)e.SelectedItem;
             
             DateTime datetime = DateTime.UtcNow;
-            string fileName = string.Format("{0}_{1}.soap", reading.Name, datetime.ToString("yyyyMMddHHmm"));
+            string fileName = string.Format("{0}_{1}.soap", reading.UrlSearch, datetime.ToString("yyyyMMddHHmm"));
             var soap = new Soap(fileName, reading.UrlSearch);
-            Navigation.PushAsync(new SoapPage(soap, false));
+            Navigation.PushAsync(new SoapPage(soap, reading.UrlSearch, false));
         }
     }
 }

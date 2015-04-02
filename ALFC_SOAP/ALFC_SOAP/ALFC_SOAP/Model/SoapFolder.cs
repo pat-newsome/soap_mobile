@@ -11,34 +11,45 @@ namespace ALFC_SOAP.Model
     public class SoapFolder
     {
         private IFileSystem fileSystem;
-
+        private IDirectory dir;
         public SoapFolder(IFileSystem fileSystem)
         {
             this.fileSystem = fileSystem;
             this.SoapMessages = new ObservableCollection<Soap>();
+            SetDirectory();
             GetFilesAsync();
         }
 
+        private void SetDirectory()
+        {
+            dir = fileSystem.GetDirectory(fileSystem.Public.FullName + "/SoapFactory");
+
+            if (!dir.Exists)
+            {
+                var soapdir = "SoapFactory";
+                fileSystem.Public.CreateSubdirectory(soapdir);
+            }
+        }
+
+        public void Refresh()
+        {
+            this.SoapMessages = new ObservableCollection<Soap>();
+            SetDirectory();
+            GetFilesAsync();
+        }
         public ObservableCollection<Soap> SoapMessages { private set; get; }
 
         async void GetFilesAsync()
         {
-            //TODO: Refactor this
-            //var listSoaps = fileSystem.Public.Files.SelectMany();
-            //// Sort the filenames.
-            //IEnumerable<string> filenames =
-            //    from filename in fileSystem.Public.Files.
-            //    where filename.EndsWith(".soap")
-            //    orderby (filename)
-            //    select filename;
-
-            //// Store them in the Notes collection.
-            //foreach (string filename in filenames)
-            //{
-            //    Soap soapmessage = new Soap(filename);
-            //    await soapmessage.LoadAsync();
-            //    this.SoapMessages.Add(soapmessage);
-            //}
+            
+            IEnumerable<IFile> files = dir.Files.Where(f => f.Name.EndsWith(".soap"));
+            
+            foreach (var file in files)
+            {
+                Soap soapmessage = new Soap(file.Name);
+                soapmessage.LoadAsync();
+                this.SoapMessages.Add(soapmessage);
+            }
         }
     }
 }

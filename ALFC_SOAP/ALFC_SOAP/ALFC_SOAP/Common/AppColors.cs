@@ -24,7 +24,10 @@ namespace ALFC_SOAP.Common
         {
             get { return Color.FromRgba(98, 25, 37, 150); }
         }
-
+        public static Color Black
+        {
+            get { return Color.FromRgb(5, 5, 5); }
+        }
         public static Color Blue
         {
             get { return Color.FromRgb(58, 69, 122); }

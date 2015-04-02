@@ -13,6 +13,7 @@ namespace ALFC_SOAP
     {
         string searchBaseURL = "http://www.biblegateway.com/";
         string baseUrl = "http://www.alfc.us/journal";
+        private bool isModal = false;
         private string SearchUrl
         {
             get 
@@ -32,44 +33,22 @@ namespace ALFC_SOAP
 
         public WebPage()
         {
-           
-            //addNewItem.Command = BuildCommand();
+            isModal = false;
             BuildTools();
-            BuildWebView(Url);
+            BuildContent();
         }
 
-        private void BuildTools()
+        
+        public WebPage(string searchTerm, bool modal)
         {
-            ToolbarItem addNewItem = new ToolbarItem
-            {
-                Name = "New entry",
-                Icon = Device.OnPlatform("new.png",
-                                         "ic_action_new.png",
-                                         "Images/add.png"),
-                Order = ToolbarItemOrder.Primary,
-                Text = "new"
-            };
-            addNewItem.Clicked += (sender, args) =>
-            {
-                // Create unique filename.
-                DateTime datetime = DateTime.UtcNow;
-                string fileName = string.Format("{0}_{1}.soap", SearchTerm, datetime.ToString("yyyyMMddHHmm"));
-                var soap = new Soap(fileName, SearchTerm);
-                // Navigate to new Page.
-                this.Navigation.PopAsync();
-                this.Navigation.PushAsync(new SoapPage(soap, false));
-            };
-            this.ToolbarItems.Add(addNewItem);
+            this.isModal = modal;
+            this.SearchTerm = searchTerm.Replace(" &", ",");
+            BuildTools();
+            BuildContent();
         }
 
-
-       
-
-        public WebPage(string searchTerm)
+        private void BuildContent()
         {
-
-            this.SearchTerm = searchTerm;
-            BuildTools();
             this.Content = new StackLayout
             {
                 Children = 
@@ -77,6 +56,47 @@ namespace ALFC_SOAP
                     BuildWebView(SearchUrl)
                 }
             };
+        }
+
+        private void BuildTools()
+        {
+            if (!isModal)
+            {
+                ToolbarItem addNewItem = new ToolbarItem
+                {
+
+                    Icon = Device.OnPlatform("new.png",
+                                             "ic_action_new.png",
+                                             "Images/add.png"),
+                    Order = ToolbarItemOrder.Primary,
+                    Text = "new"
+                };
+                addNewItem.Clicked += (sender, args) =>
+                {
+                    // Create unique filename.
+                    DateTime datetime = DateTime.UtcNow;
+                    string fileName = string.Format("{0}_{1}.soap", SearchTerm, datetime.ToString("yyyyMMddHHmm"));
+                    var soap = new Soap(fileName, SearchTerm);
+                    // Navigate to new Page.
+                    this.Navigation.PopAsync();
+                    this.Navigation.PushAsync(new SoapPage(soap, SearchTerm, false));
+                };
+                this.ToolbarItems.Add(addNewItem);
+            }
+            else
+            {
+                ToolbarItem returnItem = new ToolbarItem
+                {
+
+                    Order = ToolbarItemOrder.Primary,
+                    Text = "return"
+                };
+                returnItem.Clicked += (sender, args) =>
+                {
+                    this.Navigation.PopAsync();
+                };
+                this.ToolbarItems.Add(returnItem);
+            }
         }
 
 

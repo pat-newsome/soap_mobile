@@ -6,27 +6,26 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using ALFC_SOAP.Common;
 using ALFC_SOAP.Model;
+using ALFC_SOAP.ViewModel;
+using Acr.XamForms.Mobile;
 namespace ALFC_SOAP
 {
     public class HomePage : ContentPage
     {
         private Command<Type> navigateCommand;
-        public HomePage()
+        private ISettings settings;
+        public HomePage(ISettings settings)
         {
-            //this.BackgroundColor = AppColors.BGPurple;
-
             this.Content = this.BuildReading();
-
+            this.settings = (ISettings)settings;
             BuildToolBar();
-            
-            
         }
 
         private void BuildToolBar()
         {
             ToolbarItem addNewItem = new ToolbarItem
             {
-                Name = "New entry",
+                
                 Icon = Device.OnPlatform("new.png",
                                          "ic_action_new.png",
                                          "Images/add.png"),
@@ -37,12 +36,12 @@ namespace ALFC_SOAP
 
             ToolbarItem subItem1 = new ToolbarItem
             {
-                Name = "Settings",
+                Text = "Settings",
                 Order = ToolbarItemOrder.Secondary
             };
             ToolbarItem subItem2 = new ToolbarItem
             {
-                Name = "Social Media",
+                Text = "Social Media",
 
                 Order = ToolbarItemOrder.Secondary
             };
@@ -54,13 +53,14 @@ namespace ALFC_SOAP
 
                 // Navigate to new Page.
                 Soap page = new Soap(filename);
-                this.Navigation.PushAsync(new SoapPage(page));
+                this.Navigation.PushAsync(new SoapPage(page, "", false));
             };
 
             subItem1.Clicked += (sender, args) =>
             {
                 //Open the settings modal
                 var setting = new SettingsPage();
+                setting.BindingContext = new SettingsViewModel(settings);
                 this.Navigation.PushModalAsync(setting);
             };
             this.ToolbarItems.Add(addNewItem);
@@ -103,7 +103,7 @@ namespace ALFC_SOAP
 
                 if (book.ChapterCount == 1)
                 {
-                    Navigation.PushAsync(new WebPage(book.Name));
+                    Navigation.PushAsync(new WebPage(book.Name, false));
                 }
                 else
                 {

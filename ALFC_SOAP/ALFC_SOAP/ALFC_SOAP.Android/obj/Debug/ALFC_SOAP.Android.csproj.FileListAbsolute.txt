@@ -15,7 +15,6 @@ C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\FormsView
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\GalaSoft.MvvmLight.dll
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\GalaSoft.MvvmLight.Extras.dll
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\GalaSoft.MvvmLight.Platform.dll
-C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\Microsoft.Practices.ServiceLocation.dll
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\Newtonsoft.Json.dll
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\Xamarin.Android.Support.v4.dll
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\Xamarin.Forms.Core.dll
@@ -34,9 +33,6 @@ C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\GalaSoft.
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\GalaSoft.MvvmLight.Platform.xml
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\GalaSoft.MvvmLight.Platform.dll.mdb
-C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
-C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\Microsoft.Practices.ServiceLocation.xml
-C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\Microsoft.Practices.ServiceLocation.dll.mdb
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\Newtonsoft.Json.xml
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\Xamarin.Forms.Core.xml
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\Xamarin.Forms.Xaml.xml

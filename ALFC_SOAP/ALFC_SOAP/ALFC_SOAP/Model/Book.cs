@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Acr.XamForms.Mobile;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace ALFC_SOAP.Model
 {
     public class Book : IDataListItem
     {
+        
         public int Id { get; set; }
 
         public string Name
@@ -29,6 +31,7 @@ namespace ALFC_SOAP.Model
 
         public Book(int id, string name, string value, string original, int count)
         {
+            
             this.Id = id;
             this.Name = name;
             this.Value = value;
@@ -38,7 +41,8 @@ namespace ALFC_SOAP.Model
 
         public string Url()
         {
-            return string.Format("www.biblegateway.com/search?{0}" + Name);
+
+            return string.Format("{0}/search?{1}", Constants.SearchURLbase, Name);
         }
 
        

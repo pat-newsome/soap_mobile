@@ -6,16 +6,20 @@ using ALFC_SOAP.Model;
 using ALFC_SOAP.Common;
 namespace ALFC_SOAP
 {
-    public class BookChaptersView : StackLayout
+    public class BookChaptersView : ScrollView
     {
         Book CurrentBook;
 
         public BookChaptersView(Book book)
         {
+            StackLayout mainLayout = new StackLayout();
             CurrentBook = book;
-            this.Children.Add(new Label{ Text = CurrentBook.Name, Font= Font.SystemFontOfSize(NamedSize.Large), BackgroundColor = AppColors.BGBlue, TextColor= AppColors.White}) ;
-            this.Children.Add(new Label { Text = "             chapters", Font = Font.SystemFontOfSize(NamedSize.Medium), BackgroundColor = AppColors.White, TextColor = AppColors.Blue});
-            this.Children.Add(BuildGrid());           
+            mainLayout.Children.Add(new Label { Text = CurrentBook.Name, Font = Font.SystemFontOfSize(NamedSize.Large), BackgroundColor = AppColors.BGBlue, TextColor = AppColors.White });
+            mainLayout.Children.Add(new Label { Text = "             chapters", Font = Font.SystemFontOfSize(NamedSize.Medium), BackgroundColor = AppColors.White, TextColor = AppColors.Blue });
+
+            mainLayout.Children.Add(BuildGrid());
+            mainLayout.Children.Add(new Label { Text = "             chapters", Font = Font.SystemFontOfSize(NamedSize.Medium), BackgroundColor = AppColors.White, TextColor = AppColors.Blue });
+            this.Content = mainLayout;
         }
 
         private Grid BuildGrid()
@@ -27,7 +31,8 @@ namespace ALFC_SOAP
                 RowSpacing = 10,
                 ColumnSpacing = 10,
                 VerticalOptions = LayoutOptions.FillAndExpand,
-                BackgroundColor = AppColors.Transparent
+                BackgroundColor = AppColors.Transparent,
+                Padding = 10
             };
             tileGrid.ColumnDefinitions = new ColumnDefinitionCollection
                 { 
@@ -79,7 +84,7 @@ namespace ALFC_SOAP
             {
 
                 var btn = (Button)sender;
-                Navigation.PushAsync(new WebPage(btn.CommandParameter.ToString()));
+                Navigation.PushAsync(new WebPage(btn.CommandParameter.ToString(), false));
 
             };
             stack.Children.Add(button);
