@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="preferExternal" android:versionCode="1">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="preferExternal" android:versionCode="1" package="us.alfc.soapjournal">
 	<uses-sdk android:targetSdkVersion="19" android:minSdkVersion="16" />
 	<application android:label="SOAP Journal" android:icon="@drawable/Icon"></application>
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -7,4 +7,5 @@
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 	<uses-permission android:name="android.permission.READ_SOCIAL_STREAM" />
 	<uses-permission android:name="android.permission.WRITE_SOCIAL_STREAM" />
+	<uses-permission android:name="android.permission.INTERNET" />
 </manifest>

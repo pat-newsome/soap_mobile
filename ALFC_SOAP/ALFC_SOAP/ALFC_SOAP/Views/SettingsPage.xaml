@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:ALFC_SOAP.Common;assembly=ALFC_SOAP"
              x:Class="ALFC_SOAP.SettingsPage" BackgroundColor="White">
   
   <ScrollView>
@@ -28,39 +29,41 @@
             TextColor="{Binding EntryTextColor}"
             BackgroundColor="{Binding EntryBgColor}"
             MinimumHeightRequest="30"
+            
             VerticalOptions="CenterAndExpand"
               ></Entry>
-    <Label Text="Selected Reading Plan"
+    <Label Text="Reading Plan"
            Grid.Row="1" Grid.Column="0"
            TextColor= "Gray"
             FontAttributes="Bold"
            XAlign="End"
            YAlign="Center" />
-    <Entry  Grid.Row="1" Grid.Column="1"
+    <custom:ExtendedButton x:Name="readingPlanBtn"
+                           Grid.Row="1" Grid.Column="1"
             Text="{Binding ReadingPlan, Mode=TwoWay}"
-            Keyboard="Default"
-            TextColor="{Binding EntryTextColor}"
-            BackgroundColor="{Binding EntryBgColor}"
-            MinimumHeightRequest="30"
-            VerticalOptions="CenterAndExpand"
-              ></Entry>
+            Value="READINGPLANS"
+            FontSize="10"
+            CommandParameter="{Binding ReadingPlan, Mode=TwoWay}"
+            Clicked="ExtendedButton_Clicked"
+            />
+  
     <Label Text="Bible version"
            Grid.Row="2" Grid.Column="0"
            TextColor= "Gray"
             FontAttributes="Bold"
            XAlign="End"
            YAlign="Center" />
-    <Button x:Name="bibleVersionBtn"
-            Text="{Binding BibleVersion, Mode=TwoWay}"
+    <custom:ExtendedButton x:Name="bibleVersionBtn"
+            Text="{Binding BibleVersionName, Mode=TwoWay}"
+            Value="BIBLEVERSIONS"
             Grid.Row="2" Grid.Column="1"
-            CommandParameter="BIBLEVERSIONS"
+            FontSize="10"
+            CommandParameter="{Binding BibleVersion, Mode=TwoWay}"
             Clicked="ExtendedButton_Clicked"
             />
-    <Button x:Name="btnCancel" Grid.Row="4" Grid.Column="0"
-            Text="Cancel"
-            Clicked="Done_Clicked"  />
+
     <Button x:Name="btnComplete" Grid.Row="4" Grid.Column="1" 
-            Text="Save"
+            Text="done"
             Clicked="Done_Clicked"/>
   </Grid>
   </ScrollView>

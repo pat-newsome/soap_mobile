@@ -2,8 +2,8 @@ C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\Data\Read
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\ALFC_SOAP.Android.dll
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\ALFC_SOAP.Android.pdb
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\ALFC_SOAP.Android.dll.mdb
-C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\ALFC_SOAP.Android.apk
-C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\ALFC_SOAP.Android-Signed.apk
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\us.alfc.soapjournal.apk
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\us.alfc.soapjournal-Signed.apk
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\Acr.XamForms.Mobile.dll
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\Acr.XamForms.Mobile.Droid.dll
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\Acr.XamForms.UserDialogs.dll
@@ -16,7 +16,10 @@ C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\GalaSoft.
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\GalaSoft.MvvmLight.Extras.dll
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\GalaSoft.MvvmLight.Platform.dll
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\Newtonsoft.Json.dll
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\SQLite.Net.dll
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\SQLite.Net.Platform.XamarinAndroid.dll
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\Xamarin.Android.Support.v4.dll
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\Xamarin.Facebook.dll
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\Xamarin.Forms.Core.dll
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\Xamarin.Forms.Platform.Android.dll
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\Xamarin.Forms.Xaml.dll
@@ -39,7 +42,8 @@ C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\bin\Debug\Xamarin.F
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\ALFC_SOAP.Android.csprojResolveAssemblyReference.cache
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\ALFC_SOAP.Android.dll
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\ALFC_SOAP.Android.pdb
-C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\android\bin\ALFC_SOAP.Android.apk
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\android\bin\us.alfc.soapjournal.apk
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\res\raw\alfcsqllite
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\res\drawable\icon.png
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\res\drawable\ic_action_cancel.png
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\res\drawable\ic_action_discard.png
@@ -49,5 +53,7 @@ C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\res\drawa
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\res\drawable\white.png
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\res\drawable\actionchecked.png
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\res\drawable\actionunchecked.png
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\res\values\strings.xml
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\res\drawable\actionshare.png
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\R.cs.flag
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP.Android\obj\Debug\uploadflags.txt

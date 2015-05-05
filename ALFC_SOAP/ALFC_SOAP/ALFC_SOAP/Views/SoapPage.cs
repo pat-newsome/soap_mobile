@@ -1,4 +1,5 @@
-﻿using Acr.XamForms.Mobile.IO;
+﻿using Acr.XamForms.Mobile;
+using Acr.XamForms.Mobile.IO;
 using ALFC_SOAP.Common;
 using ALFC_SOAP.Model;
 using System;
@@ -11,12 +12,20 @@ namespace ALFC_SOAP
     {
         Soap soapmessage;
         bool isEdit;
+        ISettings settings = DependencyService.Get<ISettings>();
         IFileSystem fileSystem = DependencyService.Get<IFileSystem>();
         ILifecycleHelper helper = DependencyService.Get<ILifecycleHelper>();
         string SearchTerm = "";
-        public SoapPage(Soap soap, string searchTerm, bool isEdit = false)
+        public SoapPage(Soap soap)
         {
-            this.SearchTerm = searchTerm;
+            this.SearchTerm = string.Empty;
+            this.isEdit = false;
+            this.soapmessage = soap;
+            Title = "New SOAP";
+        }
+        public SoapPage(Soap soap, string searchterm, bool isEdit = false)
+        {
+            this.SearchTerm = searchterm;
             BuildToolBar();
             // Initialize Note object
             this.soapmessage= soap;
@@ -138,9 +147,9 @@ namespace ALFC_SOAP
                         if (confirm)
                         {
                             // Delete Note file and remove from collection.
-                            if(FileHelper.Exists(soapmessage.Filename))
-                                FileHelper.DeleteFile(soapmessage.Filename);
-                            App.SoapFolder.SoapMessages.Remove(soap);
+                            //if(FileHelper.Exists(soapmessage.Filename))
+                            //    FileHelper.DeleteFile(soapmessage.Filename);
+                            //App.SoapFolder.SoapMessages.Remove(soap);
 
                             // Return to home page.
                             await this.Navigation.PopAsync();
@@ -170,7 +179,7 @@ namespace ALFC_SOAP
             };
             readItem.Clicked += (sender, args) =>
             {
-                Navigation.PushAsync(new WebPage(SearchTerm, true));
+                Navigation.PushAsync(new WebPage(this.settings, SearchTerm, true));
             };
             this.ToolbarItems.Add(readItem);
         }
@@ -199,12 +208,7 @@ namespace ALFC_SOAP
                 !String.IsNullOrWhiteSpace(soapmessage.Application) ||
                 !String.IsNullOrWhiteSpace(soapmessage.Prayer))
             {
-                soapmessage.SaveAsync();
-
-                if (!isEdit)
-                {
-                    App.SoapFolder.SoapMessages.Add(soapmessage);
-                }
+                soapmessage.Save();
             }
 
             // Detach handlers for Suspending and Resuming events.
@@ -216,23 +220,10 @@ namespace ALFC_SOAP
 
         void OnSuspending()
         {
-            // Save transient data and state.
-            string str = soapmessage.Filename + "|" +
-                         isEdit.ToString() + "|" +
-                         soapmessage.Scripture + "|" +
-                         soapmessage.Observation + "|" +
-                         soapmessage.Application  + "|" +
-                         soapmessage.Prayer;
-
+            
             Task task = Task.Run(() =>
                 {
-
-                    soapmessage.SaveAsync();
-                    //var tempFile = fileSystem.Public.CreateFile(App.TransientFilename);
-                    //var stream = tempFile.OpenWriteAsync();
-                    //stream.
-                    //stream.CreationOptions
-                   //this.fil.WriteTextAsync(App.TransientFilename, str);
+                    soapmessage.Save();
                 });
 
             // Wait for it to finish before finishing event handler.
@@ -242,18 +233,7 @@ namespace ALFC_SOAP
         async void OnResuming()
         {
 
-            try
-            {
-
-                if (fileSystem.Temp.FileExists(App.TransientFilename))
-                {// Delete transient data and state.
-                    //fileSystem.Temp.Files[]
-                }
-            }
-            catch (Exception)
-            {
             
-            }
             
         }
     }

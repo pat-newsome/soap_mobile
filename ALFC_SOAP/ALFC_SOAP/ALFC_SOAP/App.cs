@@ -14,17 +14,13 @@ namespace ALFC_SOAP
 {
     public class App : Xamarin.Forms.Application
     {
-        
+        private static ISettings settings;
         public static IContainer Container { get; private set; }
-        static SoapFolder soapFolder;
+        
 
-        internal static readonly string TransientFilename = "TempSOAP.save";
-
-        internal static SoapFolder SoapFolder
-        {
-            get { return soapFolder; }
-        }
-
+        internal static ISettings Settings
+        { 
+            get { return settings; } }
    
 
         public App()
@@ -46,8 +42,8 @@ namespace ALFC_SOAP
             Container = builder.Build();
             IFileSystem fs = (IFileSystem)Container.Resolve(typeof(IFileSystem));
 
-            ISettings settings = (ISettings)Container.Resolve(typeof(ISettings));
-            soapFolder = new SoapFolder(fs);
+            settings = (ISettings)Container.Resolve(typeof(ISettings));
+            
             this.MainPage = new NavigationPage(new HomePage(settings));
         }
 

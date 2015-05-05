@@ -1,4 +1,5 @@
-﻿using ALFC_SOAP.Common;
+﻿using Acr.XamForms.Mobile;
+using ALFC_SOAP.Common;
 using ALFC_SOAP.Model;
 using System;
 using System.Collections.Generic;
@@ -9,10 +10,12 @@ namespace ALFC_SOAP
     public class BooksPage : ContentPage
     {
 
-        Book CurrentBook;
-        public BooksPage(Book book)
+        Book currentBook;
+        private ISettings settings;
+        public BooksPage(ISettings settings, Book book)
         {
-            CurrentBook = book;
+            this.settings = settings;
+            this.currentBook = book;
             this.BackgroundColor = AppColors.White;
             this.Content = PageLayout();
         }
@@ -22,7 +25,7 @@ namespace ALFC_SOAP
             var view = new ScrollView { HorizontalOptions = LayoutOptions.FillAndExpand, VerticalOptions = LayoutOptions.FillAndExpand };
             var stack = new StackLayout();
 
-            stack.Children.Add(new BookChaptersView(CurrentBook));
+            stack.Children.Add(new BookChaptersView(settings, currentBook));
             view.Content = stack;
             return view;
         }

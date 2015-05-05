@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite.Net.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace ALFC_SOAP.Model
 {
     public class Bible : IDataListItem
     {
+        [PrimaryKey, AutoIncrement]
         public int Id
         { get; set; }
 

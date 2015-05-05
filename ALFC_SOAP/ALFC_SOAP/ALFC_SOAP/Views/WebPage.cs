@@ -5,42 +5,39 @@ using System.Windows.Input;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using ALFC_SOAP.Model;
-//using Xamarin.Forms.Labs.Mvvm;
+using Acr.XamForms.Mobile;
 
 namespace ALFC_SOAP
 {
     class WebPage : ContentPage
     {
-        string searchBaseURL = "http://www.biblegateway.com/";
-        string baseUrl = "http://www.alfc.us/journal";
+        string searchBaseURL = Constants.SearchURLbase;
+        private ISettings currentSettings;
         private bool isModal = false;
         private string SearchUrl
         {
             get 
-            { 
-                return string.Format("{0}passage?search={1}", searchBaseURL, SearchTerm);
+            {
+                return string.Format("{0}/passage/?search={1}&version={2}", searchBaseURL, SearchTerm, currentSettings.Get(Constants.BibleVersion));
             }
         }
 
-        public string Url {
-            get
-            { return baseUrl; }
-            set
-            { baseUrl = value; }
-        }
+        
 
         private string SearchTerm;
 
-        public WebPage()
+        public WebPage(ISettings settings)
         {
+            this.currentSettings = settings;
             isModal = false;
             BuildTools();
             BuildContent();
         }
 
         
-        public WebPage(string searchTerm, bool modal)
+        public WebPage(ISettings settings, string searchTerm, bool modal)
         {
+            this.currentSettings = settings;
             this.isModal = modal;
             this.SearchTerm = searchTerm.Replace(" &", ",");
             BuildTools();
@@ -75,8 +72,7 @@ namespace ALFC_SOAP
                 {
                     // Create unique filename.
                     DateTime datetime = DateTime.UtcNow;
-                    string fileName = string.Format("{0}_{1}.soap", SearchTerm, datetime.ToString("yyyyMMddHHmm"));
-                    var soap = new Soap(fileName, SearchTerm);
+                     var soap = new Soap(SearchTerm);
                     // Navigate to new Page.
                     this.Navigation.PopAsync();
                     this.Navigation.PushAsync(new SoapPage(soap, SearchTerm, false));

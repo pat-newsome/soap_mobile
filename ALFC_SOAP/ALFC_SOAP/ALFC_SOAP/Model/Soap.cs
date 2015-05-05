@@ -3,35 +3,36 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using GalaSoft.MvvmLight;
-
+using SQLite.Net.Attributes;
 namespace ALFC_SOAP.Model
 {
     public class Soap : ViewModelBase
     {
-        string  observation, identifier, scripture, application, prayer;
+
+        string  observation, scripture, application, prayer;
 
         
-        public Soap(string filename)
+        public Soap()
         {
-            this.Filename = filename.Trim().Replace(" ", "_");
+            
         }
 
-        public Soap(string filename, string scripture)
+        public Soap(string scripture)
         {
-            this.Filename = filename.Trim().Replace(" ", "_");
+            
             this.Scripture = scripture;
         }
 
-        public string Filename { private set; get; }
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
 
+       
         public string Application
         {
             set
             {
-                if (Set(ref application, value))
-                {
-                    this.Identifier = MakeIdentifier();
-                }
+                Set(ref application, value);
+                
             }
             get { return application; }
         }
@@ -40,11 +41,7 @@ namespace ALFC_SOAP.Model
         {
             set
             {
-                if (Set(ref observation, value) &&
-                    String.IsNullOrWhiteSpace(this.Observation))
-                {
-                    this.Identifier = MakeIdentifier();
-                }
+                Set(ref observation, value);
             }
             get { return observation; }
         }
@@ -53,11 +50,7 @@ namespace ALFC_SOAP.Model
         {
             set
             {
-                if (Set(ref prayer, value) &&
-                    String.IsNullOrWhiteSpace(this.Prayer))
-                {
-                    this.Identifier = MakeIdentifier();
-                }
+                Set(ref prayer, value);
             }
             get { return prayer; }
         }
@@ -66,77 +59,57 @@ namespace ALFC_SOAP.Model
         {
             set
             {
-                if (Set(ref scripture, value) &&
-                    String.IsNullOrWhiteSpace(this.Scripture))
-                {
-                    this.Identifier = MakeIdentifier();
-                }
+                Set(ref scripture, value);
             }
             get { return scripture; }
         }
 
-        public string Identifier
+        public int ReadingId { get; set; }
+
+        public int PlanId { get; set; }
+
+        //public void SaveAsync()
+        //{
+        //    string text = Identifier() + "|" + this.Scripture + "|" + this.Observation + "|" + this.Application + "|" + this.Prayer;
+        //    FileHelper.WriteText(this.Filename, text);
+        //}
+
+        //private string Identifier()
+        //{
+        //    string.Format("{0}_{1}_{}")
+        //}
+
+        //public void LoadAsync()
+        //{
+        //    string text = FileHelper.ReadText(this.Filename);
+
+        //    string[] soaptext = text.Split('|');
+        //    if (soaptext.Length > 4)
+        //    {
+        //        this.Identifier = soaptext[0];
+        //        this.Scripture = soaptext[1];
+        //        this.Observation = soaptext[2];
+        //        this.Application = soaptext[3];
+        //        this.Prayer = soaptext[4];
+        //    }
+        //    else
+        //    {
+        //        string showText = this.Filename.Substring(0, this.Filename.IndexOf("20")).Replace('_', ' ');
+        //        this.Identifier = showText;
+        //        this.Scripture = showText;
+        //    }
+        //}
+
+        //public void DeleteAsync()
+        //{
+        //    FileHelper.DeleteFile(this.Filename);
+        //}
+
+
+
+        internal void Save()
         {
-            private set { Set(ref identifier, value); }
-            get { return identifier; }
+            throw new NotImplementedException();
         }
-
-        string MakeIdentifier()
-        {
-            if (!String.IsNullOrWhiteSpace(this.Scripture))
-                return this.Scripture;
-
-            int truncationLength = 30;
-
-            if (this.Observation == null ||
-                this.Observation.Length <= truncationLength)
-            {
-                return this.Observation;
-            }
-
-            string truncated =
-                this.Observation.Substring(0, truncationLength);
-
-            int index = truncated.LastIndexOf(' ');
-
-            if (index != -1)
-                truncated = truncated.Substring(0, index);
-
-            return truncated;
-        }
-
-        public void SaveAsync()
-        {
-            string text = this.Identifier + "|" + this.Scripture + "|" + this.Observation + "|" + this.Application + "|" + this.Prayer;
-            FileHelper.WriteText(this.Filename, text);
-        }
-
-        public void LoadAsync()
-        {
-            string text = FileHelper.ReadText(this.Filename);
-
-            string[] soaptext = text.Split('|');
-            if (soaptext.Length > 4)
-            {
-                this.Identifier = soaptext[0];
-                this.Scripture = soaptext[1];
-                this.Observation = soaptext[2];
-                this.Application = soaptext[3];
-                this.Prayer = soaptext[4];
-            }
-            else
-            {
-                string showText = this.Filename.Substring(0, this.Filename.IndexOf("20")).Replace('_', ' ');
-                this.Identifier = showText;
-                this.Scripture = showText;
-            }
-        }
-
-        public void DeleteAsync()
-        {
-            FileHelper.DeleteFile(this.Filename);
-        }
-
-        
     }
 }

@@ -4,14 +4,16 @@ using Xamarin.Forms;
 using ALFC_SOAP.Data;
 using ALFC_SOAP.Model;
 using ALFC_SOAP.Common;
+using Acr.XamForms.Mobile;
 namespace ALFC_SOAP
 {
     public class BookChaptersView : ScrollView
     {
         Book CurrentBook;
-
-        public BookChaptersView(Book book)
+        private ISettings settings;
+        public BookChaptersView(ISettings settings, Book book)
         {
+            this.settings = settings;
             StackLayout mainLayout = new StackLayout();
             CurrentBook = book;
             mainLayout.Children.Add(new Label { Text = CurrentBook.Name, Font = Font.SystemFontOfSize(NamedSize.Large), BackgroundColor = AppColors.BGBlue, TextColor = AppColors.White });
@@ -84,8 +86,7 @@ namespace ALFC_SOAP
             {
 
                 var btn = (Button)sender;
-                Navigation.PushAsync(new WebPage(btn.CommandParameter.ToString(), false));
-
+                Navigation.PushAsync(new WebPage(this.settings, btn.CommandParameter.ToString(), false));
             };
             stack.Children.Add(button);
 

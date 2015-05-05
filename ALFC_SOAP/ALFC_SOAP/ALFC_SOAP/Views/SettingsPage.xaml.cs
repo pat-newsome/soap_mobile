@@ -1,9 +1,9 @@
-﻿using System;
+﻿using ALFC_SOAP.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 
 namespace ALFC_SOAP
@@ -17,14 +17,14 @@ namespace ALFC_SOAP
 
         void Done_Clicked(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
+            //Button btn = (Button)sender;
             Navigation.PopModalAsync();
         }
 
         void ExtendedButton_Clicked(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
-            Navigation.PushModalAsync(new DropdownListPage(btn, btn.CommandParameter.ToString(), ""));
+            ExtendedButton btn = (ExtendedButton)sender;
+            Navigation.PushModalAsync(new DropdownListPage(btn, btn.Value.ToString(), btn.CommandParameter.ToString()));
         }
     }
 }

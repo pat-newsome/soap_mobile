@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Input;
-using System.Threading.Tasks;
-using Acr.XamForms.Mobile;
+﻿using Acr.XamForms.Mobile;
 using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
 using Xamarin.Forms;
 
 namespace ALFC_SOAP.ViewModel
@@ -14,8 +8,9 @@ namespace ALFC_SOAP.ViewModel
     {
         private ISettings currentSettings;
         private string _email;
-        private string _bibleVersion;
-        private string _readingPlan;
+        private string bibleVersion;
+        private string bibleVersionName;
+        private string readingPlan;
        
 
         public Color EntryTextColor { get{ return Common.AppColors.Black;}}
@@ -32,10 +27,10 @@ namespace ALFC_SOAP.ViewModel
 
         public string ReadingPlan
         {
-            get{ return _readingPlan;}
+            get{ return readingPlan;}
             set 
             {
-                Set(ref _readingPlan, value);
+                Set(ref readingPlan, value);
                 AddSetting(Constants.ReadingPlan, value);
             }
         }
@@ -44,21 +39,33 @@ namespace ALFC_SOAP.ViewModel
         {
             get
             {
-                return _bibleVersion;
+                return bibleVersion;
             }
             set 
             {
-                Set(ref _bibleVersion, value);
-
+                Set("BibleVersion", ref bibleVersion, value);
                 AddSetting(Constants.BibleVersion, value);
             }
         }
 
-        
+        public string BibleVersionName
+        {
+            get
+            {
+                return bibleVersionName;
+            }
+            set
+            {
+                Set("BibleVersionName", ref bibleVersionName, value);
+                AddSetting(Constants.BibleVersionName, value);
+            }
+        }
+
         public SettingsViewModel(ISettings settings)
         {
             this.currentSettings = settings;
             BibleVersion = currentSettings.Get(Constants.BibleVersion, "NIV");
+            BibleVersionName = currentSettings.Get(Constants.BibleVersionName, "New International Version");
             UserEmail = currentSettings.Get(Constants.UserEmail, "gpatnew@hotmail.com");
             ReadingPlan = currentSettings.Get(Constants.ReadingPlan, "Prophecy of Christ");
         }

@@ -13,7 +13,7 @@ using Xamarin.Forms.Platform.Android;
 namespace ALFC_SOAP.Droid
 {
     
-    [Activity( Label = "SOAP journal", Icon = "@drawable/icon", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity( Label = "SOAP Journal", Icon = "@drawable/icon", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity :  global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
         protected override void OnCreate(Bundle bundle)

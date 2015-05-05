@@ -1,25 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="preferExternal" android:versionCode="1" android:versionName="1.0" package="ALFC_SOAP.Android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="preferExternal" android:versionCode="1" package="us.alfc.soapjournal" android:versionName="1.0">
   <uses-sdk android:targetSdkVersion="19" android:minSdkVersion="16" />
   <application android:label="SOAP Journal" android:icon="@drawable/icon" android:name="mono.android.app.Application" android:debuggable="true">
+    <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id" />
     <activity android:configChanges="orientation|screenSize" android:label="SOAP Journal" android:noHistory="true" android:theme="@style/Theme.Splash" android:name="alfc_soap.droid.SplashActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/icon" android:label="SOAP journal" android:name="alfc_soap.droid.MainActivity" />
+    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/icon" android:label="SOAP Journal" android:name="alfc_soap.droid.MainActivity" />
     <receiver android:enabled="true" android:label="Network Status Receiver" android:name="acr.xamforms.mobile.droid.net.NetworkConnectionBroadcastReceiver">
       <intent-filter>
         <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
       </intent-filter>
     </receiver>
     <activity android:name="xamarin.media.MediaPickerActivity" />
-    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="ALFC_SOAP.Android.mono.MonoRuntimeProvider.__mono_init__" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="us.alfc.soapjournal.mono.MonoRuntimeProvider.__mono_init__" />
     <receiver android:name="mono.android.Seppuku">
       <intent-filter>
         <action android:name="mono.android.intent.action.SEPPUKU" />
-        <category android:name="mono.android.intent.category.SEPPUKU.ALFC_SOAP.Android" />
+        <category android:name="mono.android.intent.category.SEPPUKU.us.alfc.soapjournal" />
       </intent-filter>
     </receiver>
   </application>

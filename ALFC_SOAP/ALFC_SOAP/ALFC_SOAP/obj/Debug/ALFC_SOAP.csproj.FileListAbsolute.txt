@@ -8,6 +8,7 @@ C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Debug\GalaSoft.MvvmLigh
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Debug\GalaSoft.MvvmLight.Extras.dll
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Debug\Microsoft.Practices.ServiceLocation.dll
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Debug\Newtonsoft.Json.dll
+C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Debug\SQLite.Net.dll
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Debug\Xamarin.Forms.Core.dll
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Debug\Xamarin.Forms.Xaml.dll
 C:\Github\Develop\Soap\ALFC_SOAP\ALFC_SOAP\ALFC_SOAP\bin\Debug\Autofac.xml

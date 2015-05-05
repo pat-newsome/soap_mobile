@@ -1,4 +1,5 @@
 ﻿using Acr.XamForms.Mobile;
+using SQLite.Net.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace ALFC_SOAP.Model
 {
     public class Book : IDataListItem
     {
-        
+        [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
 
         public string Name

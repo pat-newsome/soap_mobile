@@ -1,48 +1,43 @@
 ﻿using ALFC_SOAP.Common;
-using ALFC_SOAP.Model;
 using ALFC_SOAP.ViewModel;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace ALFC_SOAP
 {
     public class DropdownListPage : ContentPage
     {
-        public DropdownListPage(Button button, string listview, string limitValue = "")
+        public DropdownListPage( ExtendedButton currentButton, string listview, string limitValue = "")
         {
             var list = GetListView(listview, limitValue);
             Content = list;
             this.BackgroundColor = AppColors.White;
             list.ItemTapped += (object sender, ItemTappedEventArgs e) =>
             {
-                SelectListItem selectItem = (SelectListItem)e.Item;
-                button.Text = !string.IsNullOrEmpty(selectItem.Name) ? selectItem.Name : Constants.BibleVersion;
-                button.CommandParameter = selectItem.Value;
-
-                try { Navigation.PopModalAsync(); }
-                catch (Exception) { };
-
+                IDataListItem selectItem = (IDataListItem)e.Item;
+                currentButton.Text = !string.IsNullOrEmpty(selectItem.Name) ? selectItem.Name : "select";
+                currentButton.CommandParameter = selectItem.Value;
             };
         }
        
 
 
-        private ListView GetListView(string listview, string limitValue)
+        private ListView GetListView(string listview, string currentValue)
         {
-            //Work around there is null exception thrown second time using a listview passed in
+            ListView list = null;
+            
             switch (listview)
             {
                 case "BIBLEVERSIONS":
-                    return new BiblesListView();
-              
-                default:
-                    return null;
+                    list = new BiblesListView(currentValue);
+                    break;
+                case "READINGPLANS":
+                    list = new ReadingPlanView(true); 
+                    break;
+                
 
             }
+            return list;
         }
     }
 }

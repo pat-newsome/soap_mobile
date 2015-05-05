@@ -1,4 +1,5 @@
-﻿using ALFC_SOAP.Model;
+﻿using ALFC_SOAP.Data;
+using ALFC_SOAP.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +14,10 @@ namespace ALFC_SOAP.Views
 
         public JournalEntriesView()
         {
-            App.SoapFolder.Refresh();
-           this.ItemsSource = App.SoapFolder.SoapMessages;
-           this.ItemTemplate = new DataTemplate(typeof(TextCell));
+           //App.SoapFolder.Refresh();
+            SOAPData db = new SOAPData();
+           this.ItemsSource = db.GetItems();
+           this.ItemTemplate = BaseListItemTemplate.TextCell(); 
            this.VerticalOptions = LayoutOptions.FillAndExpand;
            this.ItemTemplate.SetBinding(TextCell.TextProperty, "Identifier");
 
@@ -27,11 +29,13 @@ namespace ALFC_SOAP.Views
                     // Deselect the item.
                     this.SelectedItem = null;
 
-                    // Navigate to NotePage.
+                    // Navigate to SOAP page.
                     var soap = (Soap)args.SelectedItem;
-                    this.Navigation.PushAsync(new SoapPage(soap, soap.Identifier, true));
+                    this.Navigation.PushAsync(new SoapPage(soap));
                 }
             };
         }
+
+        
     }
 }

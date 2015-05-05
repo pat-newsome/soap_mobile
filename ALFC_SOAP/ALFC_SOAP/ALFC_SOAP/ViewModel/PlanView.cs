@@ -18,17 +18,16 @@ namespace ALFC_SOAP
             this.Children.Add(new Label { Text = plan.Name, Font = Font.SystemFontOfSize(NamedSize.Large), BackgroundColor = AppColors.BGBlue, TextColor = AppColors.White });
             this.Children.Add(new Label { Text = "             reading", Font = Font.SystemFontOfSize(NamedSize.Medium), BackgroundColor = AppColors.White, TextColor = AppColors.Blue });
             this.Children.Add(BuildReadingList(plan.Id));
-            
         }
 
         private ListView BuildReadingList(int planId)
         {
-            var scroll = new ListView();
-            var db = new ReadingDataInfo();
-            scroll.ItemsSource = db.GetListReadings(planId);
-            scroll.ItemSelected += ReadingPlanView_ItemSelected;
-            scroll.ItemTemplate = BaseListItemTemplate.GetFullLabelCheckImage(AppColors.BGGreen);
-            return scroll;
+            var readingList = new ListView();
+            var db = new ReadingData();
+            readingList.ItemsSource = db.GetItems(planId);
+            readingList.ItemSelected += ReadingPlanView_ItemSelected;
+            readingList.ItemTemplate = BaseListItemTemplate.GetLabelCheckImageShareButton(AppColors.BGGreen);
+            return readingList;
         }
 
 
@@ -38,7 +37,7 @@ namespace ALFC_SOAP
             
             DateTime datetime = DateTime.UtcNow;
             string fileName = string.Format("{0}_{1}.soap", reading.UrlSearch, datetime.ToString("yyyyMMddHHmm"));
-            var soap = new Soap(fileName, reading.UrlSearch);
+            var soap = new Soap(reading.UrlSearch);
             Navigation.PushAsync(new SoapPage(soap, reading.UrlSearch, false));
         }
     }

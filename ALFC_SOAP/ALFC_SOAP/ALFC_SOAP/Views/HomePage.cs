@@ -17,7 +17,7 @@ namespace ALFC_SOAP
         public HomePage(ISettings settings)
         {
             this.Content = this.BuildReading();
-            this.settings = (ISettings)settings;
+            this.settings = settings;
             BuildToolBar();
         }
 
@@ -103,11 +103,11 @@ namespace ALFC_SOAP
 
                 if (book.ChapterCount == 1)
                 {
-                    Navigation.PushAsync(new WebPage(book.Name, false));
+                    Navigation.PushAsync(new WebPage(this.settings, book.Name, false));
                 }
                 else
                 {
-                    Navigation.PushAsync(new BookChaptersPage(book));
+                    Navigation.PushAsync(new BookChaptersPage(this.settings, book));
                 }
             };
             stack.Children.Add(list);

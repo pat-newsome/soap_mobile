@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using SQLite.Net.Attributes;  
 
 namespace ALFC_SOAP.Model
 {
     public class ReadingPlan : IDataListItem
     {
+        [PrimaryKey, AutoIncrement]
         public int Id
         {
             get;
@@ -26,11 +27,11 @@ namespace ALFC_SOAP.Model
             set;
         }
 
-        public List<Reading> AssociatedReadings { get; set; }
-
-        public ReadingPlan()
+        public bool IsSelected
         {
-            AssociatedReadings = new List<Reading>();
+            get;
+            set;
         }
+        
     }
 }
