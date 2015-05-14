@@ -14,7 +14,7 @@ namespace ALFC_SOAP
         {
              db = new BibleDataInfo();
             this.ItemsSource = db.GetList();
-            this.ItemTemplate = BaseListItemTemplate.GetLabel(AppColors.BGBlue);
+            this.ItemTemplate = BaseListItemTemplate.GetColorLabel(AppColors.BGBlue, AppColors.BGPurple);
         }
 
      

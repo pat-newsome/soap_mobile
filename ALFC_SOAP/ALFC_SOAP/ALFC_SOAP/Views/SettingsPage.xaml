@@ -50,7 +50,7 @@
     <Label Text="Bible version"
            Grid.Row="2" Grid.Column="0"
            TextColor= "Gray"
-            FontAttributes="Bold"
+           FontAttributes="Bold"
            XAlign="End"
            YAlign="Center" />
     <custom:ExtendedButton x:Name="bibleVersionBtn"

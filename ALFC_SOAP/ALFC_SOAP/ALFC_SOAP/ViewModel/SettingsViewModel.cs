@@ -1,4 +1,5 @@
 ﻿using Acr.XamForms.Mobile;
+using ALFC_SOAP.Data;
 using GalaSoft.MvvmLight;
 using Xamarin.Forms;
 
@@ -31,7 +32,6 @@ namespace ALFC_SOAP.ViewModel
             set 
             {
                 Set(ref readingPlan, value);
-                AddSetting(Constants.ReadingPlan, value);
             }
         }
 
@@ -63,14 +63,15 @@ namespace ALFC_SOAP.ViewModel
 
         public SettingsViewModel(ISettings settings)
         {
+            PlansData dbPlan = new PlansData();
+            var plan = dbPlan.GetSelected();
+
             this.currentSettings = settings;
             BibleVersion = currentSettings.Get(Constants.BibleVersion, "NIV");
             BibleVersionName = currentSettings.Get(Constants.BibleVersionName, "New International Version");
             UserEmail = currentSettings.Get(Constants.UserEmail, "gpatnew@hotmail.com");
-            ReadingPlan = currentSettings.Get(Constants.ReadingPlan, "Prophecy of Christ");
+            ReadingPlan = plan.Name;
         }
-
-       
 
         private void AddSetting(string key, string value)
         {

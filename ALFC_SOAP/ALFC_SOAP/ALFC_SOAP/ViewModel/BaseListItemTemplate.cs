@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using ALFC_SOAP.Common;
+using ALFC_SOAP.Helpers;
 
 namespace ALFC_SOAP
 {
@@ -59,6 +60,32 @@ namespace ALFC_SOAP
             });
         }
 
+        public static DataTemplate GetSoap(Color bgColor)
+        {
+            return new DataTemplate(() =>
+            {
+                Label ListItem = new Label();
+                ListItem.TextColor = AppColors.White;
+                ListItem.SetBinding(Label.TextProperty, new Binding("Identifier", BindingMode.OneWay, null, null, "{0}"));
+                ListItem.FontSize = 10; ;
+                ListItem.HorizontalOptions = LayoutOptions.FillAndExpand;
+                ListItem.VerticalOptions = LayoutOptions.FillAndExpand;
+                ListItem.BackgroundColor = bgColor;
+                ListItem.MinimumHeightRequest = 120;
+                return new ViewCell
+                {
+                    View = new StackLayout
+                    {
+                        Orientation = StackOrientation.Horizontal,
+                        VerticalOptions = LayoutOptions.CenterAndExpand,
+                        Padding = new Thickness(5, 0, 10, 5),
+                        Spacing = 0,
+                        Children = { ListItem }
+                    }
+                };
+            });
+        }
+
         public static DataTemplate GetLabelCheckImageShareButton(Color bgColor)
         {
             return new DataTemplate(() =>
@@ -91,17 +118,21 @@ namespace ALFC_SOAP
             });
         }
 
-        public static DataTemplate GetLabel(Color bgColor)
+        public static DataTemplate GetColorLabel(Color bgColor, Color selectedBGColor)
         {
             return new DataTemplate(() =>
             {
                 Label ListItem = new Label();
                 ListItem.TextColor = AppColors.White;
                 ListItem.SetBinding(Label.TextProperty, new Binding("Name", BindingMode.OneWay, null, null, "{0}"));
+                
                 ListItem.FontSize = 12;
                 ListItem.HorizontalOptions = LayoutOptions.FillAndExpand;
                 ListItem.VerticalOptions = LayoutOptions.FillAndExpand;
-                ListItem.BackgroundColor = bgColor;
+                var bcConvertor = new BoolColorConvertor(selectedBGColor,bgColor);
+                
+                ListItem.SetBinding(Label.BackgroundColorProperty, new Binding("IsSelected", converter: bcConvertor));
+                
                 ListItem.MinimumHeightRequest = 120;
                 return new ViewCell
                 {
@@ -117,6 +148,7 @@ namespace ALFC_SOAP
             });
         }
         
+
         public static DataTemplate GetUrl()
         {
             return new DataTemplate(() =>
@@ -165,5 +197,7 @@ namespace ALFC_SOAP
         {
             return new DataTemplate(typeof(TextCell));
         }
+
+        
     }
 }

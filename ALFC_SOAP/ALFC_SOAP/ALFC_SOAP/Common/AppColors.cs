@@ -20,6 +20,10 @@ namespace ALFC_SOAP.Common
         {
             get { return Color.FromRgba(52, 107, 128, 150); }
         }
+        public static Color BGGreenHighLight
+        {
+            get { return Color.FromRgba(75, 130, 150, 150); }
+        }
         public static Color BGPurple
         {
             get { return Color.FromRgba(98, 25, 37, 150); }

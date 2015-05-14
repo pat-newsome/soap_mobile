@@ -54,24 +54,15 @@ namespace ALFC_SOAP.Data
         }
     
 
-        public int SaveItem(ReadingPlan item)
+        public int SaveItem(Soap item)
         {
             lock (locker)
             {
-                if(item.IsSelected)
-                {
-                    database.Query<ReadingPlan>("Update [ReadingPlan] SET IsSelected = 0");
-                }
-                if (item.Id != 0)
-                {
-                      //database.Query<ReadingPlan>(string.Format("Update [ReadingPlan] SET IsSelected = {0}, Name = '{1}', Value='{2}' WHERE Id = {3}", item.IsSelected? 1:0, item.Name, item.Value, item.Id));
-                    database.Update(item);
-                    return item.Id;
-                }
-                else
-                {
-                    return database.Insert(item);
-                }
+                if(item.Id == 0)
+                    database.Insert(item);
+                else   
+                   database.Update(item);
+                 return item.Id;
             }
         }
 
@@ -79,7 +70,7 @@ namespace ALFC_SOAP.Data
         {
             lock (locker)
             {
-                return database.Delete<ReadingPlan>(id);
+                return database.Delete<Soap>(id);
             }
         }
 }

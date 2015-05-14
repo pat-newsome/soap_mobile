@@ -46,6 +46,9 @@ namespace ALFC_SOAP.Model
             return string.Format("{0}/search?{1}", Constants.SearchURLbase, Name);
         }
 
-       
+        public bool IsSelected
+        {
+            get { return false; }
+        }
     }
 }

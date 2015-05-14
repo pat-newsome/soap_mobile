@@ -11,11 +11,13 @@ namespace ALFC_SOAP
 {
     public class EntriesPage : ContentPage
     {
-        
+
+        ILifecycleHelper helper = DependencyService.Get<ILifecycleHelper>();
+
         public EntriesPage ()
 	    {
             this.BackgroundColor = AppColors.White;
-            this.Content = PageLayout();
+            
 	    }
 
         private ScrollView PageLayout()
@@ -27,6 +29,24 @@ namespace ALFC_SOAP
             view.Content = stack;
             return view;
         }
-        
+        protected override void OnAppearing()
+        {
+            // Attach handlers for Suspending and Resuming event.
+            this.Content = PageLayout();
+            helper.Resuming += OnResuming;
+
+            base.OnAppearing();
+        }
+        async void OnResuming()
+        {
+            this.Content = PageLayout();
+        }
+
+        protected override void OnDisappearing()
+        {
+
+            helper.Resuming -= OnResuming;
+            base.OnDisappearing();
+        }
     }
 }

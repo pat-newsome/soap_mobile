@@ -12,10 +12,11 @@ namespace ALFC_SOAP
     {
         Soap soapmessage;
         bool isEdit;
+        bool canSave = true;
         ISettings settings = DependencyService.Get<ISettings>();
-        IFileSystem fileSystem = DependencyService.Get<IFileSystem>();
         ILifecycleHelper helper = DependencyService.Get<ILifecycleHelper>();
         string SearchTerm = "";
+
         public SoapPage(Soap soap)
         {
             this.SearchTerm = string.Empty;
@@ -116,14 +117,18 @@ namespace ALFC_SOAP
 
                 cancelItem.Clicked += async (sender, args) =>
                     {
+                        canSave = false;
                         bool confirm = await this.DisplayAlert("SOAP Message", 
                                                                "Cancel SOAP edit?", 
                                                                "Yes", "No");
                         if (confirm)
                         {
-                            
                             // Return to home page.
                             await this.Navigation.PopAsync();
+                        }
+                        else
+                        { 
+                        canSave = true;
                         }
                     };
 
@@ -146,12 +151,7 @@ namespace ALFC_SOAP
                                                                "Yes", "No");
                         if (confirm)
                         {
-                            // Delete Note file and remove from collection.
-                            //if(FileHelper.Exists(soapmessage.Filename))
-                            //    FileHelper.DeleteFile(soapmessage.Filename);
-                            //App.SoapFolder.SoapMessages.Remove(soap);
-
-                            // Return to home page.
+                            soapmessage.Delete();
                             await this.Navigation.PopAsync();
                         }
                     };
@@ -208,14 +208,20 @@ namespace ALFC_SOAP
                 !String.IsNullOrWhiteSpace(soapmessage.Application) ||
                 !String.IsNullOrWhiteSpace(soapmessage.Prayer))
             {
+                if(canSave)
                 soapmessage.Save();
             }
 
+            DetachHandlers();
+
+            base.OnDisappearing();
+        }
+
+        private void DetachHandlers()
+        {
             // Detach handlers for Suspending and Resuming events.
             helper.Suspending -= OnSuspending;
             helper.Resuming -= OnResuming;
-
-            base.OnDisappearing();
         }
 
         void OnSuspending()

@@ -1,4 +1,5 @@
-﻿using ALFC_SOAP.Data;
+﻿using ALFC_SOAP.Common;
+using ALFC_SOAP.Data;
 using ALFC_SOAP.Model;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace ALFC_SOAP.Views
            //App.SoapFolder.Refresh();
             SOAPData db = new SOAPData();
            this.ItemsSource = db.GetItems();
-           this.ItemTemplate = BaseListItemTemplate.TextCell(); 
+           this.ItemTemplate = BaseListItemTemplate.TextCell();
            this.VerticalOptions = LayoutOptions.FillAndExpand;
            this.ItemTemplate.SetBinding(TextCell.TextProperty, "Identifier");
 
@@ -31,7 +32,7 @@ namespace ALFC_SOAP.Views
 
                     // Navigate to SOAP page.
                     var soap = (Soap)args.SelectedItem;
-                    this.Navigation.PushAsync(new SoapPage(soap));
+                    this.Navigation.PushAsync(new SoapPage(soap, soap.Identifier, true));
                 }
             };
         }

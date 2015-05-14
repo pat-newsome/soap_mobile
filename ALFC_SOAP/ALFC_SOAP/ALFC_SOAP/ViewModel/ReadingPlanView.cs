@@ -20,12 +20,13 @@ namespace ALFC_SOAP
             if (!isSelect)
             {
                 this.ItemSelected += ReadingPlanView_ItemSelected;
+                
             }
             else 
             { 
                 this.ItemSelected += ReadingPlanSelected; 
             }
-            this.ItemTemplate = BaseListItemTemplate.GetLabel(AppColors.BGGreen);
+            this.ItemTemplate = BaseListItemTemplate.GetColorLabel(AppColors.BGGreen, AppColors.BGGreenHighLight);
             this.BackgroundColor = AppColors.Green;
             this.MinimumHeightRequest = 180;
         }

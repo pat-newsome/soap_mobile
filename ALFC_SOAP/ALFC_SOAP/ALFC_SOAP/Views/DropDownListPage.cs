@@ -16,7 +16,7 @@ namespace ALFC_SOAP
             {
                 IDataListItem selectItem = (IDataListItem)e.Item;
                 currentButton.Text = !string.IsNullOrEmpty(selectItem.Name) ? selectItem.Name : "select";
-                currentButton.CommandParameter = selectItem.Value;
+               // currentButton.CommandParameter = selectItem.Value;
             };
         }
        

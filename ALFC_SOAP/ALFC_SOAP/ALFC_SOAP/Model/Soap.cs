@@ -4,12 +4,13 @@ using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using GalaSoft.MvvmLight;
 using SQLite.Net.Attributes;
+using ALFC_SOAP.Data;
 namespace ALFC_SOAP.Model
 {
     public class Soap : ViewModelBase
     {
 
-        string  observation, scripture, application, prayer;
+        string observation, scripture, application, prayer, identifier;
 
         
         public Soap()
@@ -59,57 +60,44 @@ namespace ALFC_SOAP.Model
         {
             set
             {
-                Set(ref scripture, value);
+                Set(ref scripture, value.TrimStart());
+                SetIdentifier();
             }
             get { return scripture; }
+        }
+
+        
+
+        public string Identifier
+        {
+            set
+            {
+                Set(ref identifier, value);
+            }
+            get { return identifier; }
         }
 
         public int ReadingId { get; set; }
 
         public int PlanId { get; set; }
 
-        //public void SaveAsync()
-        //{
-        //    string text = Identifier() + "|" + this.Scripture + "|" + this.Observation + "|" + this.Application + "|" + this.Prayer;
-        //    FileHelper.WriteText(this.Filename, text);
-        //}
-
-        //private string Identifier()
-        //{
-        //    string.Format("{0}_{1}_{}")
-        //}
-
-        //public void LoadAsync()
-        //{
-        //    string text = FileHelper.ReadText(this.Filename);
-
-        //    string[] soaptext = text.Split('|');
-        //    if (soaptext.Length > 4)
-        //    {
-        //        this.Identifier = soaptext[0];
-        //        this.Scripture = soaptext[1];
-        //        this.Observation = soaptext[2];
-        //        this.Application = soaptext[3];
-        //        this.Prayer = soaptext[4];
-        //    }
-        //    else
-        //    {
-        //        string showText = this.Filename.Substring(0, this.Filename.IndexOf("20")).Replace('_', ' ');
-        //        this.Identifier = showText;
-        //        this.Scripture = showText;
-        //    }
-        //}
-
-        //public void DeleteAsync()
-        //{
-        //    FileHelper.DeleteFile(this.Filename);
-        //}
-
-
-
-        internal void Save()
+        public void Save()
         {
-            throw new NotImplementedException();
+            SOAPData db = new SOAPData();
+            db.SaveItem(this);
+        }
+
+        private void SetIdentifier()
+        {
+            var endPosition = Scripture.IndexOf(' ', Scripture.IndexOf(' ') + 1);
+            endPosition = endPosition <= 0 ? Scripture.Length : endPosition;
+            Identifier = Scripture.Substring(0, endPosition);
+        }
+
+        public void Delete()
+        {
+            SOAPData db = new SOAPData();
+            db.DeleteItem(Id);
         }
     }
 }

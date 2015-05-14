@@ -14,18 +14,24 @@ namespace ALFC_SOAP
     {
         private Command<Type> navigateCommand;
         private ISettings settings;
+        ILifecycleHelper helper = DependencyService.Get<ILifecycleHelper>();
         public HomePage(ISettings settings)
         {
             this.Content = this.BuildReading();
             this.settings = settings;
             BuildToolBar();
+            App.Current.ModalPopped += Current_ModalPopped;
+        }
+
+        void Current_ModalPopped(object sender, ModalPoppedEventArgs e)
+        {
+            this.Content = this.BuildReading();
         }
 
         private void BuildToolBar()
         {
             ToolbarItem addNewItem = new ToolbarItem
             {
-                
                 Icon = Device.OnPlatform("new.png",
                                          "ic_action_new.png",
                                          "Images/add.png"),
@@ -42,17 +48,15 @@ namespace ALFC_SOAP
             ToolbarItem subItem2 = new ToolbarItem
             {
                 Text = "Social Media",
-
                 Order = ToolbarItemOrder.Secondary
             };
             addNewItem.Clicked += (sender, args) =>
             {
                 // Create unique filename.
                 DateTime datetime = DateTime.UtcNow;
-                string filename = datetime.ToString("yyyyMMddHHmmss") + ".soap";
 
                 // Navigate to new Page.
-                Soap page = new Soap(filename);
+                Soap page = new Soap(DateTime.Now.ToString());
                 this.Navigation.PushAsync(new SoapPage(page, "", false));
             };
 
@@ -118,6 +122,23 @@ namespace ALFC_SOAP
         void myListOfFileBtn_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new EntriesPage());
+        }
+
+        protected override void OnAppearing()
+        {
+            helper.Resuming += OnResuming;
+            base.OnAppearing();
+        }
+
+        protected override void OnDisappearing()
+        {
+           // helper.Resuming -= OnResuming;
+            base.OnDisappearing();
+        }
+
+        async void OnResuming()
+        {
+            this.Content = this.BuildReading();
         }
     }
 }

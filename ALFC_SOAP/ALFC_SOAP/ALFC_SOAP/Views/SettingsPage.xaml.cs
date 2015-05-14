@@ -18,6 +18,7 @@ namespace ALFC_SOAP
         void Done_Clicked(object sender, EventArgs e)
         {
             //Button btn = (Button)sender;
+            var d = Parent;
             Navigation.PopModalAsync();
         }
 
